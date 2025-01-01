@@ -2,59 +2,61 @@ import { Icons } from "@/components/icons";
 import { HomeIcon, NotebookIcon } from "lucide-react";
 
 export const DATA = {
-  name: "Dillion Verma",
-  initials: "DV",
-  url: "https://dillion.io",
-  location: "San Francisco, CA",
-  locationLink: "https://www.google.com/maps/place/sanfrancisco",
+  name: "Yash Chennawar",
+  initials: "YC",
+  url: "https://dillion.io", //TODO change this
+  location: "New York Metropolitan Area",
+  locationLink: "https://www.google.com/maps/place/New+York+Metropolitan+Area/@40.9182659,-74.4475895,7z/data=!4m6!3m5!1s0x89c286d6e07696fb:0xca34053f4678c888!8m2!3d40.7127761!4d-74.0059544!16s%2Fg%2F11cn6k49x1?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D",
   description:
-    "Software Engineer turned Entrepreneur. I love building things and helping people. Very active on Twitter.",
+    "AI enthusiast and builder. Passionate about coding, solving problems, and creating impactful projects.",
   summary:
-    "At the end of 2022, I quit my job as a software engineer to go fulltime into building and scaling my own SaaS businesses. In the past, [I pursued a double degree in computer science and business](/#education), [interned at big tech companies in Silicon Valley](https://www.youtube.com/watch?v=d-LJ2e5qKdE), and [competed in over 21 hackathons for fun](/#hackathons). I also had the pleasure of being a part of the first ever in-person cohort of buildspace called [buildspace sf1](https://buildspace.so/sf1).",
+    // "At the end of 2022, I quit my job as a software engineer to go fulltime into building and scaling my own SaaS businesses. In the past, [I pursued a double degree in computer science and business](/#education), [interned at big tech companies in Silicon Valley](https://www.youtube.com/watch?v=d-LJ2e5qKdE), and [competed in over 21 hackathons for fun](/#hackathons). I also had the pleasure of being a part of the first ever in-person cohort of buildspace called [buildspace sf1](https://buildspace.so/sf1).",
+    "I'm an aspiring ML Engineer passionate about AI, software development, and quantum computing. Currently, I'm a research assistant exploring brain-inspired neural networks and their applications in deep learning. I've built AI-driven apps, VR healthcare simulations, and machine learning solutions, always striving to innovate and learn. Let's connect!",
   avatarUrl: "/me.png",
-  skills: [
+  skills: [ //TODO maybe use a circular thing for skills
+    "Python",
+    "Java",
+    "PyTorch",
     "React",
     "Next.js",
     "Typescript",
     "Node.js",
-    "Python",
-    "Go",
-    "Postgres",
-    "Docker",
-    "Kubernetes",
-    "Java",
+    "LangChain",
+    "PostgreSQL",
+    "C",
     "C++",
+    "Unity",
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
-    email: "hello@example.com",
-    tel: "+123456789",
+    email: "yash.chennawar@gmail.com",
+    tel: "+7329972018",
     social: {
       GitHub: {
         name: "GitHub",
-        url: "https://dub.sh/dillion-github",
+        url: "https://github.com/yashc73080",
         icon: Icons.github,
 
         navbar: true,
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://dub.sh/dillion-linkedin",
+        url: "https://www.linkedin.com/in/yashchennawar",
         icon: Icons.linkedin,
 
         navbar: true,
       },
-      X: {
+      X: { //TODO remove this
         name: "X",
         url: "https://dub.sh/dillion-twitter",
         icon: Icons.x,
 
         navbar: true,
       },
-      Youtube: {
+      Youtube: { //TODO remove this
         name: "Youtube",
         url: "https://dub.sh/dillion-youtube",
         icon: Icons.youtube,
@@ -72,110 +74,62 @@ export const DATA = {
 
   work: [
     {
-      company: "Atomic Finance",
-      href: "https://atomic.finance",
+      company: "Rutgers University - CABM",
+      href: "https://cabm.rutgers.edu/research/milstein-lab", //link does not work
       badges: [],
+      location: "Piscataway, NJ",
+      title: "Undergraduate Research Assistant",
+      logoUrl: "/rutgers.png",
+      start: "May 2024",
+      end: "Present",
+      description:
+        "Engineer neural networks inspired by biological brain mechanisms to advance pattern discrimination tasks as solutions for the deep learning synaptic credit assignment problem under the guidance of Dr. Aaron Milstein. Develop with PyTorch in Python for building and fine-tuning neural network models for spiral and MNIST datasets. Conduct validation to optimize network performance with HPC multithreading on Linux compute cluster with shell scripts.",
+    },
+    {
+      company: "Headstarter AI",
+      badges: [],
+      href: "https://headstarter.co/",
       location: "Remote",
-      title: "Bitcoin Protocol Engineer",
-      logoUrl: "/atomic.png",
-      start: "May 2021",
-      end: "Oct 2022",
+      title: "Software Engineer Fellow",
+      logoUrl: "/headstarter.png",
+      start: "July 2024",
+      end: "September 2024",
       description:
-        "Implemented the Bitcoin discreet log contract (DLC) protocol specifications as an open source Typescript SDK. Dockerized all microservices and setup production kubernetes cluster. Architected a data lake using AWS S3 and Athena for historical backtesting of bitcoin trading strategies. Built a mobile app using react native and typescript.",
+        "Built 5+ AI apps/websites and will be used by many users. Designed and developed projects to deploy with 3 other fellows using MVC patterns. Mentored by engineers from Amazon, Bloomberg, and Capital One on Agile, CI/CD, Git, and microservice patterns.",
     },
     {
-      company: "Shopify",
+      company: "GXF Inc.",
+      href: "https://nvidia.com/", //TODO get rid of this, no link for gxf
       badges: [],
-      href: "https://shopify.com",
-      location: "Remote",
-      title: "Software Engineer",
-      logoUrl: "/shopify.svg",
-      start: "January 2021",
-      end: "April 2021",
+      location: "Hybrid",
+      title: "Software Engineer Intern",
+      logoUrl: "/gxf.png", // TODO find gxf logo
+      start: "March 2024",
+      end: "May 2024",
       description:
-        "Implemented a custom Kubernetes controller in Go to automate the deployment of MySQL and ProxySQL custom resources in order to enable 2,000+ internal developers to instantly deploy their app databases to production. Wrote several scripts in Go to automate MySQL database failovers while maintaining master-slave replication topologies and keeping Zookeeper nodes consistent with changes.",
+        "Developed VR/MR applications for Apple Vision Pro and Meta Quest 2 & 3 to enhance medical education and practice. Collaborated with 2 cross-functional teams in a startup environment to design and implement immersive simulations, reducing medical errors and improving healthcare outcomes. Utilized Unity and C# to create interactive environments, ensuring high performance and user engagement. Presented project progress and outcomes to surgeons & the US military, receiving positive feedback and valuable insights.",
     },
     {
-      company: "Nvidia",
-      href: "https://nvidia.com/",
+      company: "Steam Works Studio",
       badges: [],
-      location: "Santa Clara, CA",
-      title: "Software Engineer",
-      logoUrl: "/nvidia.png",
-      start: "January 2020",
-      end: "April 2020",
+      href: "https://steamworksstudio.com/",
+      location: "Monroe Township, NJ",
+      title: "Robotics Tutor",
+      logoUrl: "/steamworks.png",
+      start: "February 2023",
+      end: "July 2023",
       description:
-        "Architected and wrote the entire MVP of the GeForce Now Cloud Gaming internal admin and A/B testing dashboard using React, Redux, TypeScript, and Python.",
-    },
-    {
-      company: "Splunk",
-      href: "https://splunk.com",
-      badges: [],
-      location: "San Jose, CA",
-      title: "Software Engineer",
-      logoUrl: "/splunk.svg",
-      start: "January 2019",
-      end: "April 2019",
-      description:
-        "Co-developed a prototype iOS app with another intern in Swift for the new Splunk Phantom security orchestration product (later publicly demoed and launched at .conf annual conference in Las Vegas). Implemented a realtime service for the iOS app in Django (Python) and C++; serialized data using protobufs transmitted over gRPC resulting in an approximate 500% increase in data throughput.",
-    },
-    {
-      company: "Lime",
-      href: "https://li.me/",
-      badges: [],
-      location: "San Francisco, CA",
-      title: "Software Engineer",
-      logoUrl: "/lime.svg",
-      start: "January 2018",
-      end: "April 2018",
-      description:
-        "Proposed and implemented an internal ruby API for sending/receiving commands to scooters over LTE networks. Developed a fully automated bike firmware update system to handle asynchronous firmware updates of over 100,000+ scooters worldwide, and provide progress reports in real-time using React, Ruby on Rails, PostgreSQL and AWS EC2 saving hundreds of developer hours.",
-    },
-    {
-      company: "Mitre Media",
-      href: "https://mitremedia.com/",
-      badges: [],
-      location: "Toronto, ON",
-      title: "Software Engineer",
-      logoUrl: "/mitremedia.png",
-      start: "May 2017",
-      end: "August 2017",
-      description:
-        "Designed and implemented a robust password encryption and browser cookie storage system in Ruby on Rails. Leveraged the Yahoo finance API to develop the dividend.com equity screener",
+        "Mentored students in robotics for the World Robotics Olympiad, First LEGO League, and Sumo Robot League events. Taught Python and Java, focusing on automation, fundamental engineering principles, and sensor control.",
     },
   ],
   education: [
     {
-      school: "Buildspace",
-      href: "https://buildspace.so",
-      degree: "s3, s4, sf1, s5",
-      logoUrl: "/buildspace.jpg",
+      school: "Rutgers University-New Brunswick",
+      href: "https://newbrunswick.rutgers.edu/",
+      degree: "BS in Computer Science and Mathematics, Minor in Data Science, Honors College",
+      logoUrl: "/rutgers.png",
       start: "2023",
-      end: "2024",
-    },
-    {
-      school: "University of Waterloo",
-      href: "https://uwaterloo.ca",
-      degree: "Bachelor's Degree of Computer Science (BCS)",
-      logoUrl: "/waterloo.png",
-      start: "2016",
-      end: "2021",
-    },
-    {
-      school: "Wilfrid Laurier University",
-      href: "https://wlu.ca",
-      degree: "Bachelor's Degree of Business Administration (BBA)",
-      logoUrl: "/laurier.png",
-      start: "2016",
-      end: "2021",
-    },
-    {
-      school: "International Baccalaureate",
-      href: "https://ibo.org",
-      degree: "IB Diploma",
-      logoUrl: "/ib.png",
-      start: "2012",
-      end: "2016",
+      end: "Present",
     },
   ],
   projects: [
