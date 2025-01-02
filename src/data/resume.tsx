@@ -32,7 +32,7 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "/blog", icon: NotebookIcon, label: "Blog" },
+    { href: "https://docs.google.com/document/d/e/2PACX-1vQOJIlwtTdI1FBLWaAu9_5qREEFukUqNKpaD3GygA0CtMb8yHzE3vp7k7XtKVazDdgqo5SUTxIK_5Yx/pub", icon: NotebookIcon, label: "Resume" }, // Can switch to pdf
   ],
   contact: {
     email: "yash.chennawar@gmail.com",
@@ -42,35 +42,19 @@ export const DATA = {
         name: "GitHub",
         url: "https://github.com/yashc73080",
         icon: Icons.github,
-
         navbar: true,
       },
       LinkedIn: {
         name: "LinkedIn",
         url: "https://www.linkedin.com/in/yashchennawar",
         icon: Icons.linkedin,
-
         navbar: true,
       },
-      X: { //TODO remove this
-        name: "X",
-        url: "https://dub.sh/dillion-twitter",
-        icon: Icons.x,
-
-        navbar: true,
-      },
-      Youtube: { //TODO remove this
-        name: "Youtube",
-        url: "https://dub.sh/dillion-youtube",
-        icon: Icons.youtube,
-        navbar: true,
-      },
-      email: {
-        name: "Send Email",
-        url: "#",
+      Email: {
+        name: "Email",
+        url: "mailto:yash.chennawar@gmail.com",
         icon: Icons.email,
-
-        navbar: false,
+        navbar: true,
       },
     },
   },
@@ -78,7 +62,7 @@ export const DATA = {
   work: [
     {
       company: "Rutgers University - CABM",
-      href: "https://cabm.rutgers.edu/research/milstein-lab", // TODO all links don't work
+      href: "https://cabm.rutgers.edu/research/milstein-lab",
       badges: [],
       location: "Piscataway, NJ",
       title: "Undergraduate Research Assistant",
@@ -125,7 +109,7 @@ export const DATA = {
     },
     {
       company: "GXF Inc.",
-      href: "https://nvidia.com/", //TODO get rid of this, no link for gxf
+      href: "",
       badges: [],
       location: "Hybrid",
       title: "Software Engineer Intern",
@@ -197,7 +181,7 @@ export const DATA = {
       title: "MBS Dashboard",
       href: "",
       dates: "Sep 2024 - December 2024",
-      active: true, // TODO figure out what this is
+      active: true,
       description:
         "Developed a full-stack MBS management system to filter mortgages, calculate costs, manage pools, and add new entries, streamlining complex financial operations efficiently.",
       technologies: [
