@@ -27,13 +27,16 @@ export default function Page() {
               <BlurFadeText
                 className="max-w-[600px] md:text-xl"
                 delay={BLUR_FADE_DELAY}
-                text={DATA.description}
+                text={DATA.description} // TODO under this, have the typing animation to cycle through software engineer, machine learing, etc
               />
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
               <Avatar className="size-28 border">
-                <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
-                <AvatarFallback>{DATA.initials}</AvatarFallback>
+                {DATA.avatarUrl ? (
+                  <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
+                ) : (
+                  <AvatarFallback className="text-4xl font-bold">{DATA.initials}</AvatarFallback>
+                )}
               </Avatar>
             </BlurFade>
           </div>
@@ -69,6 +72,7 @@ export default function Page() {
                 badges={work.badges}
                 period={`${work.start} - ${work.end ?? "Present"}`}
                 description={work.description}
+                links={work.links}
               />
             </BlurFade>
           ))}
@@ -120,12 +124,11 @@ export default function Page() {
                   My Projects
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Check out my latest work
+                  Some cool stuff I&apos;ve built
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  I&apos;ve worked on a variety of projects, from simple
-                  websites to complex web applications. Here are a few of my
-                  favorites.
+                  I&apos;ve developed many projects, AI-powered web applications to machine learning models.
+                  Here are some of my favorites. 
                 </p>
               </div>
             </div>
@@ -161,15 +164,11 @@ export default function Page() {
                   Hackathons
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  I like building things
+                  Building things with friends
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  During my time in university, I attended{" "}
-                  {DATA.hackathons.length}+ hackathons. People from around the
-                  country would come together and build incredible things in 2-3
-                  days. It was eye-opening to see the endless possibilities
-                  brought to life by a group of motivated and passionate
-                  individuals.
+                  I love participating in hackathons and learning about the wonderful and innovative ideas from my 
+                  teammates and other groups.
                 </p>
               </div>
             </div>
@@ -206,7 +205,7 @@ export default function Page() {
                 Get in Touch
               </h2>
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Want to chat? Just shoot me a dm{" "}
+                {/* Want to connect? Just shoot me a dm{" "}
                 <Link
                   href={DATA.contact.social.X.url}
                   className="text-blue-500 hover:underline"
@@ -214,7 +213,26 @@ export default function Page() {
                   with a direct question on twitter
                 </Link>{" "}
                 and I&apos;ll respond whenever I can. I will ignore all
-                soliciting.
+                soliciting. */}
+                Please feel free to reach out to me via{" "}
+                <Link
+                  href={DATA.contact.social.LinkedIn.url}
+                  className="text-blue-500 hover:underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LinkedIn
+                </Link>{" "}
+                or{" "}
+                <Link
+                  href="mailto:yash.chennawar@gmail.com"
+                  className="text-blue-500 hover:underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Email
+                </Link>{" "} 
+                if you have any questions or just want to chat.
               </p>
             </div>
           </BlurFade>

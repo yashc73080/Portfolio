@@ -2,12 +2,13 @@
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardHeader } from "@/components/ui/card";
+import { Card, CardHeader, CardFooter } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { ChevronRightIcon } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+import BlurFade from "@/components/magicui/blur-fade";
 
 interface ResumeCardProps {
   logoUrl: string;
@@ -18,7 +19,13 @@ interface ResumeCardProps {
   badges?: readonly string[];
   period: string;
   description?: string;
+  links?: readonly {
+    icon: React.ReactNode;
+    type: string;
+    href: string;
+  }[];
 }
+
 export const ResumeCard = ({
   logoUrl,
   altText,
@@ -28,6 +35,7 @@ export const ResumeCard = ({
   badges,
   period,
   description,
+  links,
 }: ResumeCardProps) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
 
@@ -39,13 +47,9 @@ export const ResumeCard = ({
   };
 
   return (
-    <Link
-      href={href || "#"}
-      className="block cursor-pointer"
-      onClick={handleClick}
-    >
-      <Card className="flex">
-        <div className="flex-none">
+    <Card className="flex">
+      <div className="flex-none">
+        <Link href={href || "#"} target="_blank" rel="noopener noreferrer">
           <Avatar className="border size-12 m-auto bg-muted-background dark:bg-foreground">
             <AvatarImage
               src={logoUrl}
@@ -54,9 +58,17 @@ export const ResumeCard = ({
             />
             <AvatarFallback>{altText[0]}</AvatarFallback>
           </Avatar>
-        </div>
-        <div className="flex-grow ml-4 items-center flex-col group">
-          <CardHeader>
+        </Link>
+      </div>
+      <div className="flex-grow ml-4 items-center flex-col group">
+        <CardHeader>
+          <Link
+            href={href || "#"}
+            className="block cursor-pointer"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={handleClick}
+          >
             <div className="flex items-center justify-between gap-x-2 text-base">
               <h3 className="inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm">
                 {title}
@@ -85,26 +97,41 @@ export const ResumeCard = ({
               </div>
             </div>
             {subtitle && <div className="font-sans text-xs">{subtitle}</div>}
-          </CardHeader>
-          {description && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{
-                opacity: isExpanded ? 1 : 0,
-
-                height: isExpanded ? "auto" : 0,
-              }}
-              transition={{
-                duration: 0.7,
-                ease: [0.16, 1, 0.3, 1],
-              }}
-              className="mt-2 text-xs sm:text-sm"
-            >
-              {description}
-            </motion.div>
-          )}
-        </div>
-      </Card>
-    </Link>
+          </Link>
+        </CardHeader>
+        {description && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{
+              opacity: isExpanded ? 1 : 0,
+              height: isExpanded ? "auto" : 0,
+            }}
+            transition={{
+              duration: 0.7,
+              ease: [0.16, 1, 0.3, 1],
+            }}
+            className="mt-2 text-xs sm:text-sm"
+          >
+            {description}
+          </motion.div>
+        )}
+        {isExpanded && links && links.length > 0 && (
+          <BlurFade delay={0.2}>
+            <CardFooter className="px-2 pb-2 p-0 m-0 mt-2">
+              <div className="flex flex-row flex-wrap items-start gap-1">
+                {links.map((link, idx) => (
+                  <Link href={link?.href} key={idx} target="_blank" rel="noopener noreferrer">
+                    <Badge key={idx} className="flex gap-2 px-2 py-1 text-[10px]">
+                      {link.icon}
+                      {link.type}
+                    </Badge>
+                  </Link>
+                ))}
+              </div>
+            </CardFooter>
+          </BlurFade>
+        )}
+      </div>
+    </Card>
   );
 };
