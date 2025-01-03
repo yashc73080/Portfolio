@@ -1,18 +1,24 @@
+"use client";
+
 import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
+import { Chatbot } from "@/components/chatbot";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import TypingAnimation from "@/components/ui/typing-animation";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
+import { useState } from "react";
 
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
+  const [isChatOpen, setIsChatOpen] = useState(false);
+
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
       <section id="hero">
@@ -32,7 +38,7 @@ export default function Page() {
               />
               <BlurFade delay={BLUR_FADE_DELAY * 2}>
                 <TypingAnimation
-                  phrases={["Software Engineer", "Machine Learning Engineer"]}
+                  phrases={["Software Engineer", "ML Engineer"]}
                   typingSpeed={100}
                   backspaceSpeed={50}
                   pauseTime={1200}
@@ -239,6 +245,19 @@ export default function Page() {
           </BlurFade>
         </div>
       </section>
+
+      <button
+        onClick={() => setIsChatOpen(!isChatOpen)}
+        className="fixed bottom-6 right-6 bg-foreground text-background rounded-full px-4 py-2 font-medium shadow-md hover:shadow-lg transition"
+      >
+        {isChatOpen ? "Close chat" : "Ask me anything"}
+      </button>
+      {isChatOpen && (
+        <div className="fixed bottom-20 right-6 w-80 h-96 bg-background border border-foreground/20 text-foreground rounded-md shadow-xl overflow-hidden flex flex-col">
+          <Chatbot />
+        </div>
+      )}
+      
     </main>
   );
 }
