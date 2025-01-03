@@ -12,6 +12,7 @@ import TypingAnimation from "@/components/ui/typing-animation";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
+import { MessageCircle, X } from 'lucide-react';
 import { useState } from "react";
 
 const BLUR_FADE_DELAY = 0.04;
@@ -248,16 +249,21 @@ export default function Page() {
 
       <button
         onClick={() => setIsChatOpen(!isChatOpen)}
-        className="fixed bottom-6 right-6 bg-foreground text-background rounded-full px-4 py-2 font-medium shadow-md hover:shadow-lg transition"
+        className="fixed bottom-6 right-6 bg-foreground text-background rounded-full p-3 shadow-md hover:shadow-lg transition"
+        aria-label={isChatOpen ? "Close chat" : "Open chat"}
       >
-        {isChatOpen ? "Close chat" : "Ask me anything"}
+        {isChatOpen ? (
+          <X className="h-6 w-6" />
+        ) : (
+          <MessageCircle className="h-6 w-6" />
+        )}
       </button>
       {isChatOpen && (
         <div className="fixed bottom-20 right-6 w-80 h-96 bg-background border border-foreground/20 text-foreground rounded-md shadow-xl overflow-hidden flex flex-col">
           <Chatbot />
         </div>
       )}
-      
+
     </main>
   );
 }
