@@ -11,7 +11,7 @@ export const DATA = {
     "AI enthusiast and builder. Passionate about coding, solving problems, and creating impactful projects.",
   summary:
     // "At the end of 2022, I quit my job as a software engineer to go fulltime into building and scaling my own SaaS businesses. In the past, [I pursued a double degree in computer science and business](/#education), [interned at big tech companies in Silicon Valley](https://www.youtube.com/watch?v=d-LJ2e5qKdE), and [competed in over 21 hackathons for fun](/#hackathons). I also had the pleasure of being a part of the first ever in-person cohort of buildspace called [buildspace sf1](https://buildspace.so/sf1).",
-    "I'm an aspiring ML Engineer passionate about AI, software development, and quantum computing. Currently, I'm a research assistant exploring brain-inspired neural networks and their applications in deep learning. I've built AI-driven apps, VR healthcare simulations, and machine learning solutions, always striving to innovate and learn. Let's connect!",
+    "My name is Yash Chennawar, and I'm an aspiring ML Engineer passionate about AI, software development, and quantum computing. Currently, I'm a research assistant exploring brain-inspired neural networks and their applications in deep learning. I've built AI-driven apps, VR healthcare simulations, and machine learning solutions, always striving to innovate and learn. Let's connect!",
   avatarUrl: "",
   skills: [
     "Python",
@@ -188,6 +188,7 @@ export const DATA = {
         "Vite.js",
         "React.js",
         "JavaScript",
+        "Java",
         "PostgreSQL",
         "REST APIs",
         "Spring-Boot",

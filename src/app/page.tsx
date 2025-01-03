@@ -5,6 +5,7 @@ import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
+import TypingAnimation from "@/components/ui/typing-animation";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
@@ -27,8 +28,17 @@ export default function Page() {
               <BlurFadeText
                 className="max-w-[600px] md:text-xl"
                 delay={BLUR_FADE_DELAY}
-                text={DATA.description} // TODO under this, have the typing animation to cycle through software engineer, machine learing, etc
+                text={DATA.description}
               />
+              <BlurFade delay={BLUR_FADE_DELAY * 2}>
+                <TypingAnimation
+                  phrases={["Software Engineer", "Machine Learning Engineer"]}
+                  typingSpeed={100}
+                  backspaceSpeed={50}
+                  pauseTime={1200}
+                  className="text-2xl font-medium"
+                />
+              </BlurFade>
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
               <Avatar className="size-28 border">
