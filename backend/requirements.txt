@@ -1,0 +1,7 @@
+# Python version: 3.9.21
+langchain==0.3.14
+langchain-text-splitters==0.3.4
+langchain-pinecone==0.2.0
+langchain-openai==0.2.14
+pinecone-client==5.0.1
+python-dotenv==1.0.1

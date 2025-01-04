@@ -25,6 +25,7 @@ export const DATA = {
     "PostgreSQL",
     "C",
     "C++",
+    "C#",
     "R",
     "Shell",
     "MongoDB",

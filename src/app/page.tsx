@@ -1,18 +1,18 @@
 "use client";
 
-import { HackathonCard } from "@/components/hackathon-card";
+import { DATA } from "@/data/resume";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
-import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
+import { ProjectCard } from "@/components/project-card";
+import { HackathonCard } from "@/components/hackathon-card";
 import { Chatbot } from "@/components/chatbot";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import TypingAnimation from "@/components/ui/typing-animation";
-import { DATA } from "@/data/resume";
-import Link from "next/link";
 import Markdown from "react-markdown";
 import { MessageCircle, X } from 'lucide-react';
+import Link from "next/link";
 import { useState } from "react";
 
 const BLUR_FADE_DELAY = 0.04;
