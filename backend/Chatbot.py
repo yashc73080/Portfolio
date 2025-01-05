@@ -28,9 +28,7 @@ class Chatbot:
         """Load and split the markdown file into sections."""
         with open(self.markdown_file, 'r') as file:
             markdown_document = file.read()
-        markdown_splitter = MarkdownHeaderTextSplitter(
-            headers_to_split_on=headers_to_split_on, strip_headers=False
-        )
+        markdown_splitter = MarkdownHeaderTextSplitter(headers_to_split_on=headers_to_split_on) # strip_headers=False
         return markdown_splitter.split_text(markdown_document)
 
     def initialize_embeddings(self, model_name='multilingual-e5-large'):
@@ -105,7 +103,7 @@ if __name__ == "__main__":
     MARKDOWN_FILE = "data.md"
     INDEX_NAME = "portfolio"
     NAMESPACE = "data"
-    HEADERS_TO_SPLIT_ON = [("##", "Header 2")]
+    HEADERS_TO_SPLIT_ON = [("#", "Header 1"), ("##", "Header 2"),]
     MODEL_NAME = 'multilingual-e5-large'
     RETRIEVAL_QA_CHAT_PROMPT_PATH = "langchain-ai/retrieval-qa-chat"
     LLM_MODEL_NAME = "meta-llama/llama-3.2-3b-instruct:free"
