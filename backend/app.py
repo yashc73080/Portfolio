@@ -9,13 +9,19 @@ import os
 load_dotenv(dotenv_path="../.env.local")
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": [
-    "http://localhost:3000",
-    "https://portfolio-mu-three-91.vercel.app",
-    "https://portfolio-git-main-yashs-projects-73080.vercel.app",
-    "https://portfolio-pz2j1gjq9-yashs-projects-73080.vercel.app",
-    "https://portfolio-yashs-projects-73080.vercel.app/"
-]}})
+CORS(app, resources={
+    r"/*": {
+        "origins": [
+            "http://localhost:3000",
+            "https://portfolio-mu-three-91.vercel.app",
+            "https://portfolio-git-main-yashs-projects-73080.vercel.app",
+            "https://portfolio-pz2j1gjq9-yashs-projects-73080.vercel.app",
+            "https://portfolio-yashs-projects-73080.vercel.app/"
+        ],
+        "methods": ["GET", "POST", "OPTIONS"],
+        "allow_headers": ["Content-Type"]
+    }
+})
 
 # Initialize chatbot
 chatbot = Chatbot(
@@ -39,22 +45,37 @@ chatbot.initialize_retrieval_chain(
 @app.route('/api/chat', methods=['POST'])
 def chat():
     try:
+        print("Received request:", request.json)  # Debug log
         user_input = request.json.get('message')
         if not user_input:
+            print("No message provided")  # Debug log
             return jsonify({"error": "Message is required"}), 400
 
-        # Get response from chatbot
         response = chatbot.query_chatbot(user_input)
-        
+        print("Generated response:", response)  # Debug log
         return jsonify({
             "response": {
                 "answer": response['answer'],
-                # "context": response['context']
             }
         })
     except Exception as e:
-        print(f"Error: {str(e)}")
+        print(f"Error in chat endpoint: {str(e)}")  # Debug log
         return jsonify({"error": "An error occurred processing your request"}), 500
+    
+# Add CORS headers to all responses
+@app.after_request
+def after_request(response):
+    response.headers.add('Access-Control-Allow-Origin', 'https://portfolio-mu-three-91.vercel.app')
+    response.headers.add('Access-Control-Allow-Origin', 'https://portfolio-git-main-yashs-projects-73080.vercel.app')
+    response.headers.add('Access-Control-Allow-Origin', 'https://portfolio-pz2j1gjq9-yashs-projects-73080.vercel.app')
+    response.headers.add('Access-Control-Allow-Origin', 'https://portfolio-yashs-projects-73080.vercel.app/')
+    response.headers.add('Access-Control-Allow-Headers', 'Content-Type')
+    response.headers.add('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
+    return response
+
+@app.route('/health', methods=['GET'])
+def health_check():
+    return jsonify({"status": "healthy"}), 200
 
 # if __name__ == '__main__':
 #     app.run(debug=True, port=5000)

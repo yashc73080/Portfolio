@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Send } from 'lucide-react';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
 
 // Make it scroll down to meet the latest message
 // make sure text wraps into the message
@@ -14,8 +13,9 @@ const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
 interface Message {
   content: string;
   sender: "user" | "bot";
-  // context?: string;
 }
+
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
 
 export function Chatbot() {
   const [messages, setMessages] = useState<Message[]>([]);
@@ -35,7 +35,9 @@ export function Chatbot() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json',
         },
+        credentials: 'omit',
         body: JSON.stringify({ message: input }),
       });
 
@@ -48,7 +50,6 @@ export function Chatbot() {
       const botMessage: Message = {
         content: data.response.answer,
         sender: "bot",
-        // context: data.response.context
       };
       
       setMessages((prev) => [...prev, botMessage]);
@@ -82,11 +83,6 @@ export function Chatbot() {
               }`}
             >
               <div>{message.content}</div>
-              {/* {message.context && (
-                <div className="text-xs mt-2 opacity-70">
-                  Source: {message.context}
-                </div>
-              )} */}
             </div>
           </div>
         ))}
