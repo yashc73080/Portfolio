@@ -66,6 +66,9 @@ class Chatbot:
 
     def upsert_documents(self, documents):
         """Embed and upsert documents into the Pinecone index."""
+        index = self.pc.Index(self.index_name)
+        index.delete(delete_all=True, namespace=self.namespace)
+
         self.docsearch = PineconeVectorStore.from_documents(
             documents=documents,
             index_name=self.index_name,
