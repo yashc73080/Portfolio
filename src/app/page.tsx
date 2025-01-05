@@ -39,7 +39,7 @@ export default function Page() {
               />
               <BlurFade delay={BLUR_FADE_DELAY * 2}>
                 <TypingAnimation
-                  phrases={["Software Engineer", "ML Engineer"]}
+                  phrases={["Software Engineering", "Machine Learning", "Full Stack"]}
                   typingSpeed={100}
                   backspaceSpeed={50}
                   pauseTime={1200}

@@ -15,7 +15,8 @@ interface Message {
   sender: "user" | "bot";
 }
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+// Use environment variable with fallback
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://portfolio-backend-jg4d.onrender.com';
 
 export function Chatbot() {
   const [messages, setMessages] = useState<Message[]>([]);
@@ -35,20 +36,19 @@ export function Chatbot() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Accept': 'application/json',
         },
-        credentials: 'omit',
         body: JSON.stringify({ message: input }),
       });
 
       if (!response.ok) {
-        throw new Error('Network response was not ok');
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'An error occurred');
       }
 
       const data = await response.json();
       
       const botMessage: Message = {
-        content: data.response.answer,
+        content: data.response.answer || "Sorry, I couldn't generate a response.",
         sender: "bot",
       };
       
@@ -56,7 +56,7 @@ export function Chatbot() {
     } catch (error) {
       console.error('Error:', error);
       const errorMessage: Message = {
-        content: "Sorry, I encountered an error. Please try again.",
+        content: error instanceof Error ? error.message : "Sorry, I encountered an error. Please try again.",
         sender: "bot"
       };
       setMessages((prev) => [...prev, errorMessage]);
@@ -82,7 +82,7 @@ export function Chatbot() {
                   : "bg-muted"
               }`}
             >
-              <div>{message.content}</div>
+              <div className="whitespace-pre-wrap">{message.content}</div>
             </div>
           </div>
         ))}
