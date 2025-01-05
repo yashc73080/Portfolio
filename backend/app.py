@@ -9,7 +9,13 @@ import os
 load_dotenv(dotenv_path="../.env.local")
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": ["http://localhost:3000"]}})
+CORS(app, resources={r"/*": {"origins": [
+    "http://localhost:3000",
+    "https://portfolio-mu-three-91.vercel.app",
+    "https://portfolio-git-main-yashs-projects-73080.vercel.app",
+    "https://portfolio-pz2j1gjq9-yashs-projects-73080.vercel.app",
+    "https://portfolio-yashs-projects-73080.vercel.app/"
+]}})
 
 # Initialize chatbot
 chatbot = Chatbot(
