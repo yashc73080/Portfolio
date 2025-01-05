@@ -44,6 +44,15 @@ Hybrid
 - Utilized Unity and C# to create interactive environments, ensuring high performance and user engagement
 - Presented project progress and outcomes to surgeons & the US military, receiving positive feedback and valuable insights
 
+
+## Steam Works Studio
+Robotics Tutor
+Feb 2023 - Jul 2023
+Monroe Township, New Jersey
+- Mentored students in robotics to train them for the World Robotics Olympiad (WRO), First LEGO League, and Sumo Robot League events. 
+- Taught robotics principles, Python, and LEGO Spike Coding, focusing on automation and sensor control. 
+- Helped the students develop engineering and physics skills to understand robotics and mechanics such as gear mechanics.
+
 # Projects
 
 ## TripWhiz

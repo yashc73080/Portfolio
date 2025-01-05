@@ -13,7 +13,6 @@ interface Message {
   sender: "user" | "bot";
 }
 
-// Use environment variable with fallback
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://portfolio-backend-jg4d.onrender.com';
 
 export function Chatbot() {
@@ -100,6 +99,7 @@ export function Chatbot() {
             </div>
           </div>
         )}
+        <div ref={messagesEndRef} />
       </div>
       <div className="p-4 border-t border-foreground/20">
         <form
