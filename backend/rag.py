@@ -1,120 +1,144 @@
 from langchain_text_splitters import MarkdownHeaderTextSplitter
 from langchain_pinecone import PineconeEmbeddings, PineconeVectorStore
 from pinecone import Pinecone, ServerlessSpec
-
 from langchain_openai import ChatOpenAI
 from langchain.chains import create_retrieval_chain
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain import hub
-
 from dotenv import load_dotenv
 import os
 import time
 
-# TODO modularize this script into functions
-
-# Get environment variables from .env.local file
-
+# Load environment variables
 load_dotenv(dotenv_path="../.env.local")
-PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 
-# Chunk the markdown content into sections based on the headers
+class Chatbot:
+    def __init__(self, pinecone_api_key, openai_api_key, openrouter_api_key, markdown_file, index_name, namespace):
+        self.pinecone_api_key = pinecone_api_key
+        self.openai_api_key = openai_api_key
+        self.openrouter_api_key = openrouter_api_key
+        self.markdown_file = markdown_file
+        self.index_name = index_name
+        self.namespace = namespace
+        self.embeddings = None
+        self.pc = None
+        self.docsearch = None
+        self.retrieval_chain = None
 
-with open('data.md', 'r') as file:
-    markdown_document = file.read()
+    def load_markdown(self, headers_to_split_on):
+        """Load and split the markdown file into sections."""
+        with open(self.markdown_file, 'r') as file:
+            markdown_document = file.read()
+        markdown_splitter = MarkdownHeaderTextSplitter(
+            headers_to_split_on=headers_to_split_on, strip_headers=False
+        )
+        return markdown_splitter.split_text(markdown_document)
 
-headers_to_split_on = [
-    ("##", "Header 2")
-]
+    def initialize_embeddings(self, model_name='multilingual-e5-large'):
+        """Initialize Pinecone embeddings."""
+        self.embeddings = PineconeEmbeddings(
+            model=model_name,
+            pinecone_api_key=self.pinecone_api_key
+        )
 
-markdown_splitter = MarkdownHeaderTextSplitter(
-    headers_to_split_on=headers_to_split_on, strip_headers=False
-)
-md_header_splits = markdown_splitter.split_text(markdown_document)
+    def setup_pinecone_index(self, dimension, cloud='aws', region='us-east-1'):
+        """Set up a Pinecone index."""
+        self.pc = Pinecone(api_key=self.pinecone_api_key)
+        spec = ServerlessSpec(cloud=cloud, region=region)
 
-print(md_header_splits)
-print("\n")
+        if self.index_name not in self.pc.list_indexes().names():
+            self.pc.create_index(
+                name=self.index_name,
+                dimension=dimension,
+                metric="cosine",
+                spec=spec
+            )
+            # Wait for index to be ready
+            while not self.pc.describe_index(self.index_name).status['ready']:
+                time.sleep(1)
 
-# Initialize a LangChain embedding object
+    def upsert_documents(self, documents):
+        """Embed and upsert documents into the Pinecone index."""
+        self.docsearch = PineconeVectorStore.from_documents(
+            documents=documents,
+            index_name=self.index_name,
+            embedding=self.embeddings,
+            namespace=self.namespace
+        )
+        # Allow time for indexing
+        time.sleep(5)
 
-model_name = 'multilingual-e5-large'
-embeddings = PineconeEmbeddings(
-    model=model_name,
-    pinecone_api_key=PINECONE_API_KEY
-)
+    def initialize_retrieval_chain(self, llm_model_name, retrieval_qa_chat_prompt_path):
+        """Initialize the retrieval chain using LangChain."""
+        retrieval_qa_chat_prompt = hub.pull(retrieval_qa_chat_prompt_path)
+        retriever = self.docsearch.as_retriever()
 
-# Make a Pinecone index to store document
+        llm = ChatOpenAI(
+            model_name=llm_model_name,
+            openai_api_key=self.openrouter_api_key,
+            openai_api_base="https://openrouter.ai/api/v1",
+            temperature=0.0,
+        )
 
-pc = Pinecone(api_key=PINECONE_API_KEY)
+        combine_docs_chain = create_stuff_documents_chain(
+            llm, retrieval_qa_chat_prompt
+        )
+        self.retrieval_chain = create_retrieval_chain(retriever, combine_docs_chain)
 
-cloud = 'aws'
-region = 'us-east-1'
-spec = ServerlessSpec(cloud=cloud, region=region)
+    def query_chatbot(self, query):
+        """Query the chatbot and return the response."""
+        if not self.retrieval_chain:
+            raise ValueError("Retrieval chain not initialized. Call `initialize_retrieval_chain` first.")
+        return self.retrieval_chain.invoke({"input": query})
 
-index_name = "portfolio"
+    def get_index_stats(self):
+        """Return Pinecone index statistics."""
+        return self.pc.Index(self.index_name).describe_index_stats()
 
-if index_name not in pc.list_indexes().names():
-    pc.create_index(
-        name=index_name,
-        dimension=embeddings.dimension,
-        metric="cosine",
-        spec=spec
+
+# Example Usage
+if __name__ == "__main__":
+    # Environment variables
+    PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
+    OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+    OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
+
+    # Configuration
+    MARKDOWN_FILE = "data.md"
+    INDEX_NAME = "portfolio"
+    NAMESPACE = "data"
+    HEADERS_TO_SPLIT_ON = [("##", "Header 2")]
+    MODEL_NAME = 'multilingual-e5-large'
+    RETRIEVAL_QA_CHAT_PROMPT_PATH = "langchain-ai/retrieval-qa-chat"
+    LLM_MODEL_NAME = "meta-llama/llama-3.2-3b-instruct:free"
+
+    # Initialize chatbot
+    chatbot = Chatbot(
+        pinecone_api_key=PINECONE_API_KEY,
+        openai_api_key=OPENAI_API_KEY,
+        openrouter_api_key=OPENROUTER_API_KEY,
+        markdown_file=MARKDOWN_FILE,
+        index_name=INDEX_NAME,
+        namespace=NAMESPACE
     )
-    # Wait for index to be ready
-    while not pc.describe_index(index_name).status['ready']:
-        time.sleep(1)
 
-# See that it is empty
-print("Index before upsert:")
-print(pc.Index(index_name).describe_index_stats())
-print("\n")
+    # Load markdown and set up embeddings
+    md_header_splits = chatbot.load_markdown(HEADERS_TO_SPLIT_ON)
+    chatbot.initialize_embeddings(MODEL_NAME)
 
-# Embed and upsert each record in a namespace
+    # Setup Pinecone index and upsert documents
+    chatbot.setup_pinecone_index(dimension=chatbot.embeddings.dimension)
+    chatbot.upsert_documents(md_header_splits)
 
-namespace = "data"
+    # Initialize retrieval chain
+    chatbot.initialize_retrieval_chain(LLM_MODEL_NAME, RETRIEVAL_QA_CHAT_PROMPT_PATH)
 
-docsearch = PineconeVectorStore.from_documents(
-    documents=md_header_splits,
-    index_name=index_name,
-    embedding=embeddings,
-    namespace=namespace
-)
-
-time.sleep(5)
-
-# See how many vectors have been upserted
-print("Index after upsert:")
-print(pc.Index(index_name).describe_index_stats())
-print("\n")
-time.sleep(2)
-
-# Initialize LangChain object to chat with OpenAI LLM
-
-retrieval_qa_chat_prompt = hub.pull("langchain-ai/retrieval-qa-chat")
-retriever=docsearch.as_retriever()
-
-# With OpenRouter
-llm = ChatOpenAI(
-    model_name="meta-llama/llama-3.2-3b-instruct:free",
-    openai_api_key=OPENROUTER_API_KEY,
-    openai_api_base="https://openrouter.ai/api/v1",
-    temperature=0.0,
-)
-
-combine_docs_chain = create_stuff_documents_chain(
-    llm, retrieval_qa_chat_prompt
-)
-retrieval_chain = create_retrieval_chain(retriever, combine_docs_chain)
-
-# Test the chatbot
-
-query1 = "Where did Yash work?"
-
-answer1_with_knowledge = retrieval_chain.invoke({"input": query1})
-
-print("Answer with knowledge:\n\n", answer1_with_knowledge['answer'])
-print("\nContext used:\n\n", answer1_with_knowledge['context'])
-print("\n")
-time.sleep(2)
+    # Query chatbot
+    while True:
+        user_query = input("Enter your query (type 'exit' to quit): ")
+        if user_query.lower() == "exit":
+            break
+        response = chatbot.query_chatbot(user_query)
+        print("Answer with knowledge:\n\n", response['answer'])
+        print("\nContext used:\n\n", response['context'])
+        print("\n")
