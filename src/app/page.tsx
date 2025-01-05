@@ -13,7 +13,7 @@ import TypingAnimation from "@/components/ui/typing-animation";
 import Markdown from "react-markdown";
 import { MessageCircle, X } from 'lucide-react';
 import Link from "next/link";
-import { useState } from "react";
+import React, { useState } from "react";
 
 const BLUR_FADE_DELAY = 0.04;
 

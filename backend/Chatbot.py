@@ -13,9 +13,8 @@ import time
 load_dotenv(dotenv_path="../.env.local")
 
 class Chatbot:
-    def __init__(self, pinecone_api_key, openai_api_key, openrouter_api_key, markdown_file, index_name, namespace):
+    def __init__(self, pinecone_api_key, openrouter_api_key, markdown_file, index_name, namespace):
         self.pinecone_api_key = pinecone_api_key
-        self.openai_api_key = openai_api_key
         self.openrouter_api_key = openrouter_api_key
         self.markdown_file = markdown_file
         self.index_name = index_name
@@ -100,7 +99,6 @@ class Chatbot:
 if __name__ == "__main__":
     # Environment variables
     PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
-    OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
     OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 
     # Configuration
@@ -115,7 +113,6 @@ if __name__ == "__main__":
     # Initialize chatbot
     chatbot = Chatbot(
         pinecone_api_key=PINECONE_API_KEY,
-        openai_api_key=OPENAI_API_KEY,
         openrouter_api_key=OPENROUTER_API_KEY,
         markdown_file=MARKDOWN_FILE,
         index_name=INDEX_NAME,
