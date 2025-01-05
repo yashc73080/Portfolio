@@ -4,6 +4,7 @@ from pinecone import Pinecone, ServerlessSpec
 from langchain_openai import ChatOpenAI
 from langchain.chains import create_retrieval_chain
 from langchain.chains.combine_documents import create_stuff_documents_chain
+from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain import hub
 from dotenv import load_dotenv
 import os
@@ -23,6 +24,15 @@ class Chatbot:
         self.pc = None
         self.docsearch = None
         self.retrieval_chain = None
+
+    def get_system_prompt(self):
+        return '''
+        You are an AI assistant that will answer questions about Yash Chennawar based on the information provided to you as context. 
+        Don't ever explicitly refer to this context, but use it to answer questions to the best of your ability. 
+        Use the metadata provided to you in the context to answer your questions. If you don't know the answer, you can say that. 
+        Just do not make information up. Only give information that was requested. 
+        Only answer questions relevant to Yash Chennawar and/or the context provided. 
+        '''
 
     def load_markdown(self, headers_to_split_on):
         """Load and split the markdown file into sections."""
@@ -67,9 +77,7 @@ class Chatbot:
 
     def initialize_retrieval_chain(self, llm_model_name, retrieval_qa_chat_prompt_path):
         """Initialize the retrieval chain using LangChain."""
-        retrieval_qa_chat_prompt = hub.pull(retrieval_qa_chat_prompt_path)
-        retriever = self.docsearch.as_retriever()
-
+        # Create LLM with base configuration
         llm = ChatOpenAI(
             model_name=llm_model_name,
             openai_api_key=self.openrouter_api_key,
@@ -77,21 +85,42 @@ class Chatbot:
             temperature=0.0,
         )
 
+        # Get the base prompt from hub
+        base_prompt = hub.pull(retrieval_qa_chat_prompt_path)
+        
+        # Create a new prompt template with system message
+        prompt = ChatPromptTemplate.from_messages([
+            ("system", self.get_system_prompt()),
+            *base_prompt.messages,
+            MessagesPlaceholder(variable_name="chat_history"),
+        ])
+
+        retriever = self.docsearch.as_retriever()
+        
+        # Create the chain with the new prompt
         combine_docs_chain = create_stuff_documents_chain(
-            llm, retrieval_qa_chat_prompt
+            llm, 
+            prompt
         )
+        
         self.retrieval_chain = create_retrieval_chain(retriever, combine_docs_chain)
 
-    def query_chatbot(self, query):
+    def query_chatbot(self, query, chat_history=None):
         """Query the chatbot and return the response."""
         if not self.retrieval_chain:
             raise ValueError("Retrieval chain not initialized. Call `initialize_retrieval_chain` first.")
-        return self.retrieval_chain.invoke({"input": query})
+        
+        # Include chat history if provided
+        inputs = {
+            "input": query,
+            "chat_history": chat_history or []
+        }
+        
+        return self.retrieval_chain.invoke(inputs)
 
     def get_index_stats(self):
         """Return Pinecone index statistics."""
         return self.pc.Index(self.index_name).describe_index_stats()
-
 
 # Example Usage
 if __name__ == "__main__":

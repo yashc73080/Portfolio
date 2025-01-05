@@ -6,7 +6,6 @@ import { Input } from "@/components/ui/input";
 import { Send } from 'lucide-react';
 
 // make sure text wraps into the message
-// customize it so it knows that its an assistant to help answer questions about me
 
 interface Message {
   content: string;
@@ -16,7 +15,12 @@ interface Message {
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://portfolio-backend-jg4d.onrender.com';
 
 export function Chatbot() {
-  const [messages, setMessages] = useState<Message[]>([]);
+  const initialMessage: Message = {
+    content: "Hi, I can answer any questions you have about Yash! How can I help you today?",
+    sender: "bot",
+  };
+
+  const [messages, setMessages] = useState<Message[]>([initialMessage]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
