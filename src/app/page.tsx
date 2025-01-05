@@ -259,7 +259,7 @@ export default function Page() {
         )}
       </button>
       {isChatOpen && (
-        <div className="fixed bottom-20 right-6 w-80 h-96 bg-background border border-foreground/20 text-foreground rounded-md shadow-xl overflow-hidden flex flex-col">
+        <div className="fixed bottom-20 right-6 w-96 h-[30rem] bg-background border border-foreground/20 text-foreground rounded-md shadow-xl overflow-hidden flex flex-col">
           <Chatbot />
         </div>
       )}

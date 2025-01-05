@@ -1,12 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Send } from 'lucide-react';
 
-
-// Make it scroll down to meet the latest message
 // make sure text wraps into the message
 // customize it so it knows that its an assistant to help answer questions about me
 
@@ -22,6 +20,7 @@ export function Chatbot() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const handleSendMessage = async () => {
     if (input.trim() === "") return;
@@ -64,6 +63,10 @@ export function Chatbot() {
       setIsLoading(false);
     }
   };
+
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages]);
 
   return (
     <>
