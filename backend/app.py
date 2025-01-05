@@ -56,5 +56,8 @@ def chat():
         print(f"Error: {str(e)}")
         return jsonify({"error": "An error occurred processing your request"}), 500
 
-if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+# if __name__ == '__main__':
+#     app.run(debug=True, port=5000)
+
+port = int(os.environ.get("PORT", 10000))
+app.run(host='0.0.0.0', port=port)
