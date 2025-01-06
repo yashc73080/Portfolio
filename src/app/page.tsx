@@ -11,14 +11,69 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import TypingAnimation from "@/components/ui/typing-animation";
 import Markdown from "react-markdown";
-import { Sparkles, X } from 'lucide-react';
+import { X } from 'lucide-react';
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const BLUR_FADE_DELAY = 0.04;
 
+const GradientSparkles = () => (
+  <svg
+    viewBox="0 0 24 24"
+    width="40"
+    height="40"
+    className="h-10 w-10"
+  >
+    <defs>
+    <linearGradient id="sparkleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#7C3AED" />
+      <stop offset="33%" stopColor="#7C3AED" />
+      <stop offset="42%" stopColor="#2563EB" />
+      <stop offset="58%" stopColor="#2563EB" />
+      <stop offset="70%" stopColor="#10B981" />
+      <stop offset="100%" stopColor="#10B981" />
+    </linearGradient>
+    </defs>
+    {/* Main center sparkle */}
+    <path
+      d="M12 1L14.5 9.5L22 11L14.5 12.5L12 21L9.5 12.5L2 11L9.5 9.5L12 1Z"
+      fill="url(#sparkleGradient)"
+    >
+      <animate attributeName="opacity" values="1;0.7;1" dur="2s" repeatCount="indefinite" />
+    </path>
+    {/* Top right sparkle */}
+    <path
+      d="M19 0L20.5 3.5L24 4.5L20.5 5.5L19 9L17.5 5.5L14 4.5L17.5 3.5L19 0Z"
+      fill="url(#sparkleGradient)"
+    >
+      <animate attributeName="opacity" values="1;0.5;1" dur="1.5s" repeatCount="indefinite" />
+    </path>
+    {/* Bottom left sparkle */}
+    <path
+      d="M5 13L6.5 16.5L10 17.5L6.5 18.5L5 22L3.5 18.5L0 17.5L3.5 16.5L5 13Z"
+      fill="url(#sparkleGradient)"
+    >
+      <animate attributeName="opacity" values="1;0.5;1" dur="1.7s" repeatCount="indefinite" />
+    </path>
+  </svg>
+);
+
 export default function Page() {
   const [isChatOpen, setIsChatOpen] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
+
+  useEffect(() => {
+    // Show the popup after a short delay
+    const showTimer = setTimeout(() => setShowPopup(true), 2000);
+    
+    // Hide the popup after 5 seconds
+    const hideTimer = setTimeout(() => setShowPopup(false), 7000);
+
+    return () => {
+      clearTimeout(showTimer);
+      clearTimeout(hideTimer);
+    };
+  }, []);
 
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
@@ -249,22 +304,35 @@ export default function Page() {
         </div>
       </section>
 
-      <button
-        onClick={() => setIsChatOpen(!isChatOpen)}
-        className="fixed bottom-[20%] right-6 bg-foreground text-background rounded-full p-3 shadow-md hover:shadow-lg transition"
-        aria-label={isChatOpen ? "Close chat" : "Open chat"}
-      >
-        {isChatOpen ? (
-          <X className="h-6 w-6" />
-        ) : (
-          <Sparkles className="h-6 w-6" />
+      <div className="fixed bottom-[20%] right-6 flex items-center">
+      <div className="relative">
+        {showPopup && (
+          <div className="absolute bottom-full right-0 mb-2 transform-none">
+            <div className="relative bg-foreground text-background px-5 py-1 rounded-lg shadow-lg animate-fade-in-out text-sm whitespace-nowrap">
+              Try me!
+              <div className="absolute -bottom-1 right-3 w-3 h-3 transform rotate-45 bg-foreground" />
+            </div>
+          </div>
         )}
-      </button>
+        <button
+          onClick={() => setIsChatOpen(!isChatOpen)}
+          className="bg-foreground hover:bg-foreground/90 text-background rounded-full p-2 shadow-md hover:shadow-lg transition-all duration-200 hover:scale-105"
+          aria-label={isChatOpen ? "Close chat" : "Open chat"}
+        >
+          {isChatOpen ? (
+            <X className="h-5 w-5" />
+          ) : (
+            <GradientSparkles />
+          )}
+        </button>
+      </div>
+      
       {isChatOpen && (
         <div className="fixed bottom-20 right-6 w-80 h-[30rem] bg-background border border-foreground/20 text-foreground rounded-md shadow-xl overflow-hidden flex flex-col">
           <Chatbot onClose={() => setIsChatOpen(false)}/>
         </div>
       )}
+    </div>
 
     </main>
   );

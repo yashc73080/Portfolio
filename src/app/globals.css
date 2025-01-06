@@ -108,6 +108,15 @@
       background-color: var(--shiki-dark-bg);
     }
   }
+
+  @keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    10%, 90% { opacity: 1; }
+  }
+  
+  .animate-fade-in-out {
+    animation: fadeInOut 5s ease-in-out;
+  }  
   
   code[data-line-numbers] {
     counter-reset: line;
