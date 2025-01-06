@@ -150,7 +150,7 @@ export const DATA = {
       logoUrl: "/rutgers.png",
       start: "2023",
       end: "Present",
-      description: "Coursework: Artificial Intelligence, Computer Architecture, Data Structures, Data Management, Algorithms, Discrete Structures, Linear Algebra, Differential Equations, Calculus III, Probability Theory",
+      description: "Coursework: Introduction to Artificial Intelligence, Introduction to Data Science, Computer Architecture, Data Structures, Principles of Information and Data Management, Design and Analysis of Computer Algorithms, Discrete Structures (I & II), Linear Algebra, Elementary Differential Equations, Calculus III, Probability Theory",
       links: [
         {
           type: "Rutgers Honors College",
@@ -163,8 +163,8 @@ export const DATA = {
   projects: [
     {
       title: "Interactive Portfolio",
-      href: "https://portfolio-yashs-projects-73080.vercel.app/",
-      dates: "Dec 2024 - Jan 2024",
+      href: "https://yashchennawar.onrender.com/",
+      dates: "Dec 2024 - Jan 2025",
       active: true,
       description:
         "Developed a personal portfolio website to showcase my projects, skills, and experiences. Integrated a RAG-powered AI chatbot to answer questions based on my experiences.",
@@ -177,13 +177,12 @@ export const DATA = {
         "Pinecone",
         "OpenAI",
         "Flask",
-        "Vercel",
         "Render",
       ],
       links: [
         {
           type: "Website",
-          href: "https://portfolio-yashs-projects-73080.vercel.app/",
+          href: "https://yashchennawar.onrender.com/",
           icon: <Icons.globe className="size-3" />,
         },
         {
