@@ -85,7 +85,7 @@ class Chatbot:
             model_name=llm_model_name,
             openai_api_key=self.openrouter_api_key,
             openai_api_base="https://openrouter.ai/api/v1",
-            temperature=0.0,
+            temperature=0.4,
         )
 
         # Get the base prompt from hub
@@ -135,7 +135,7 @@ if __name__ == "__main__":
     MARKDOWN_FILE = "data.md"
     INDEX_NAME = "portfolio"
     NAMESPACE = "data"
-    HEADERS_TO_SPLIT_ON = [("#", "Header 1"), ("##", "Header 2"),]
+    HEADERS_TO_SPLIT_ON = [("#", "Header 1"), ("##", "Header 2"), ("###", "Header 3")]
     MODEL_NAME = 'multilingual-e5-large'
     RETRIEVAL_QA_CHAT_PROMPT_PATH = "langchain-ai/retrieval-qa-chat"
     LLM_MODEL_NAME = "meta-llama/llama-3.2-3b-instruct:free"

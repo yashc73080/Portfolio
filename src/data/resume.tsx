@@ -4,13 +4,12 @@ import { HomeIcon, NotebookIcon, FileText } from "lucide-react";
 export const DATA = {
   name: "Yash Chennawar",
   initials: "YC",
-  url: "https://portfolio-yashs-projects-73080.vercel.app/", //TODO change this
+  url: "https://portfolio-yashs-projects-73080.vercel.app/",
   location: "New York Metropolitan Area",
   locationLink: "https://www.google.com/maps/place/New+York+Metropolitan+Area/@40.9182659,-74.4475895,7z/data=!4m6!3m5!1s0x89c286d6e07696fb:0xca34053f4678c888!8m2!3d40.7127761!4d-74.0059544!16s%2Fg%2F11cn6k49x1?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D",
   description:
     "AI enthusiast and builder. Passionate about coding, solving problems, and creating impactful projects.",
   summary:
-    // "At the end of 2022, I quit my job as a software engineer to go fulltime into building and scaling my own SaaS businesses. In the past, [I pursued a double degree in computer science and business](/#education), [interned at big tech companies in Silicon Valley](https://www.youtube.com/watch?v=d-LJ2e5qKdE), and [competed in over 21 hackathons for fun](/#hackathons). I also had the pleasure of being a part of the first ever in-person cohort of buildspace called [buildspace sf1](https://buildspace.so/sf1).",
     "My name is Yash Chennawar, and I'm an aspiring ML Engineer passionate about AI, software development, and quantum computing. Currently, I'm a research assistant exploring brain-inspired neural networks and their applications in deep learning. I've built AI-driven apps, VR healthcare simulations, and machine learning solutions, always striving to innovate and learn. Let's connect!",
   avatarUrl: "",
   skills: [
@@ -23,6 +22,7 @@ export const DATA = {
     "Node.js",
     "LangChain",
     "PostgreSQL",
+    "JDBC",
     "C",
     "C++",
     "C#",
@@ -243,6 +243,7 @@ export const DATA = {
         "REST APIs",
         "Spring-Boot",
         "JDBC",
+        "Maven",
       ],
       links: [],
       image: "/mbs.jpeg",

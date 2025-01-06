@@ -15,8 +15,6 @@ import { Sparkles, X } from 'lucide-react';
 import Link from "next/link";
 import React, { useState } from "react";
 
-// TODO add analytics
-
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {

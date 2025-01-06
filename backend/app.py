@@ -38,7 +38,7 @@ chatbot = Chatbot(
 )
 
 # Initialize chatbot components
-md_header_splits = chatbot.load_markdown([("#", "Header 1"), ("##", "Header 2")])
+md_header_splits = chatbot.load_markdown([("#", "Header 1"), ("##", "Header 2"), ("###", "Header 3")])
 chatbot.initialize_embeddings('multilingual-e5-large')
 chatbot.setup_pinecone_index(dimension=chatbot.embeddings.dimension)
 chatbot.upsert_documents(md_header_splits)
