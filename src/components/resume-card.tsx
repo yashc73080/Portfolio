@@ -49,16 +49,14 @@ export const ResumeCard = ({
   return (
     <Card className="flex">
       <div className="flex-none">
-        <Link href={href || "#"} target="_blank" rel="noopener noreferrer">
-          <Avatar className="border size-12 m-auto bg-muted-background dark:bg-foreground">
-            <AvatarImage
-              src={logoUrl}
-              alt={altText}
-              className="object-contain"
-            />
-            <AvatarFallback>{altText[0]}</AvatarFallback>
-          </Avatar>
-        </Link>
+        <Avatar className="border size-12 m-auto bg-muted-background dark:bg-foreground">
+          <AvatarImage
+            src={logoUrl}
+            alt={altText}
+            className="object-contain"
+          />
+          <AvatarFallback>{altText[0]}</AvatarFallback>
+        </Avatar>
       </div>
       <div className="flex-grow ml-4 items-center flex-col group">
         <CardHeader>
@@ -96,7 +94,13 @@ export const ResumeCard = ({
                 {period}
               </div>
             </div>
-            {subtitle && <div className="font-sans text-xs">{subtitle}</div>}
+            {/* {subtitle && <div className="font-sans text-xs">{subtitle}</div>} */}
+            {subtitle && (
+              <span className="font-sans text-xs my-0 mt-1">
+                {subtitle}
+                {!isExpanded && <span className="text-xs text-muted-foreground"> ...more</span>}
+              </span>
+            )}
           </Link>
         </CardHeader>
         {description && (

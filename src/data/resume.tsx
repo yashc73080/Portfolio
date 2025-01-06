@@ -4,7 +4,7 @@ import { HomeIcon, NotebookIcon, FileText } from "lucide-react";
 export const DATA = {
   name: "Yash Chennawar",
   initials: "YC",
-  url: "https://dillion.io", //TODO change this
+  url: "https://portfolio-yashs-projects-73080.vercel.app/", //TODO change this
   location: "New York Metropolitan Area",
   locationLink: "https://www.google.com/maps/place/New+York+Metropolitan+Area/@40.9182659,-74.4475895,7z/data=!4m6!3m5!1s0x89c286d6e07696fb:0xca34053f4678c888!8m2!3d40.7127761!4d-74.0059544!16s%2Fg%2F11cn6k49x1?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D",
   description:
@@ -79,13 +79,8 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
         {
-          type: "Spiral",
+          type: "Source",
           href: "https://github.com/Milstein-Lab/Summer2024",
-          icon: <Icons.github className="size-3" />,
-        },
-        {
-          type: "EIANN",
-          href: "https://github.com/Milstein-Lab/EIANN",
           icon: <Icons.github className="size-3" />,
         },
         {
@@ -105,8 +100,14 @@ export const DATA = {
       start: "July 2024",
       end: "September 2024",
       description:
-        "Built 5+ AI apps/websites and will be used by many users. Designed and developed projects to deploy with 3 other fellows using MVC patterns. Mentored by engineers from Amazon, Bloomberg, and Capital One on Agile, CI/CD, Git, and microservice patterns.",
-      links: [],
+        "Built multiple AI apps/websites covering diverse domains from pantry trackers to code assistants. Designed, developed, and deployed applications using MVC patterns, Agile, CI/CD, and microservices under the guidance of engineers from Amazon, Bloomberg, and Capital One.",
+      links: [
+        {
+          type: "Headstarter",
+          href: "https://headstarter.co/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
     },
     {
       company: "GXF Inc.",
@@ -132,17 +133,31 @@ export const DATA = {
       end: "July 2023",
       description:
         "Mentored students in robotics for the World Robotics Olympiad, First LEGO League, and Sumo Robot League events. Taught Python and Java, focusing on automation, fundamental engineering principles, and sensor control.",
-      links: [],
+      links: [
+        {
+          type: "Steam Works",
+          href: "https://steamworksstudio.com/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
     },
   ],
   education: [
     {
-      school: "Rutgers University-New Brunswick",
+      school: "Rutgers University-New Brunswick, Honors College",
       href: "https://newbrunswick.rutgers.edu/",
-      degree: "BS in Computer Science and Mathematics, Minor in Data Science, Honors College",
+      degree: "BS in Computer Science and Mathematics, Minor in Data Science",
       logoUrl: "/rutgers.png",
       start: "2023",
       end: "Present",
+      description: "Coursework: Artificial Intelligence, Computer Architecture, Data Structures, Data Management, Algorithms, Discrete Structures, Linear Algebra, Differential Equations, Calculus III, Probability Theory",
+      links: [
+        {
+          type: "Rutgers Honors College",
+          href: "https://honorscollege.rutgers.edu/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
     },
   ],
   projects: [
@@ -388,7 +403,7 @@ export const DATA = {
       mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-white.svg",
       links: [
         {
-          title: "Github",
+          title: "Source",
           icon: <Icons.github className="h-4 w-4" />,
           href: "https://github.com/yashc73080/HackRUF24",
         },
@@ -404,7 +419,7 @@ export const DATA = {
       mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-white.svg",
       links: [
         {
-          title: "Github",
+          title: "Source",
           icon: <Icons.github className="h-4 w-4" />,
           href: "https://github.com/yashc73080/HackRUS2024",
         },

@@ -113,6 +113,8 @@ export default function Page() {
                 title={education.school}
                 subtitle={education.degree}
                 period={`${education.start} - ${education.end}`}
+                description={education.description}
+                links={education.links}
               />
             </BlurFade>
           ))}
@@ -138,7 +140,7 @@ export default function Page() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                  My Projects
+                  Projects
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                   Some cool stuff I&apos;ve built
@@ -249,7 +251,7 @@ export default function Page() {
 
       <button
         onClick={() => setIsChatOpen(!isChatOpen)}
-        className="fixed bottom-6 right-6 bg-foreground text-background rounded-full p-3 shadow-md hover:shadow-lg transition"
+        className="fixed bottom-[20%] right-6 bg-foreground text-background rounded-full p-3 shadow-md hover:shadow-lg transition"
         aria-label={isChatOpen ? "Close chat" : "Open chat"}
       >
         {isChatOpen ? (
@@ -260,7 +262,7 @@ export default function Page() {
       </button>
       {isChatOpen && (
         <div className="fixed bottom-20 right-6 w-96 h-[30rem] bg-background border border-foreground/20 text-foreground rounded-md shadow-xl overflow-hidden flex flex-col">
-          <Chatbot />
+          <Chatbot onClose={() => setIsChatOpen(false)}/>
         </div>
       )}
 
