@@ -162,6 +162,40 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "Interactive Portfolio",
+      href: "https://portfolio-yashs-projects-73080.vercel.app/",
+      dates: "Dec 2024 - Jan 2024",
+      active: true,
+      description:
+        "Developed a personal portfolio website to showcase my projects, skills, and experiences. Integrated a RAG-powered AI chatbot to answer questions based on my experiences.",
+      technologies: [
+        "Next.js",
+        "React.js",
+        "TypeScript",
+        "Python",
+        "LangChain",
+        "Pinecone",
+        "OpenAI",
+        "Flask",
+        "Vercel",
+        "Render",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://portfolio-yashs-projects-73080.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/yashc73080/Portfolio",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/portfolio.jpeg",
+      video: "",
+    },
+    {
       title: "TripWhiz",
       href: "https://tripwhiz.onrender.com/",
       dates: "Oct 2024 - Present",
@@ -196,7 +230,7 @@ export const DATA = {
     {
       title: "MBS Dashboard",
       href: "",
-      dates: "Sep 2024 - December 2024",
+      dates: "Sep 2024 - Dec 2024",
       active: true,
       description:
         "Developed a full-stack MBS management system to filter mortgages, calculate costs, manage pools, and add new entries, streamlining complex financial operations efficiently.",
