@@ -11,7 +11,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import TypingAnimation from "@/components/ui/typing-animation";
 import Markdown from "react-markdown";
-import { MessageCircle, X } from 'lucide-react';
+import { Sparkles, X } from 'lucide-react';
 import Link from "next/link";
 import React, { useState } from "react";
 
@@ -257,7 +257,7 @@ export default function Page() {
         {isChatOpen ? (
           <X className="h-6 w-6" />
         ) : (
-          <MessageCircle className="h-6 w-6" />
+          <Sparkles className="h-6 w-6" />
         )}
       </button>
       {isChatOpen && (
