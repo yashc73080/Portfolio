@@ -16,7 +16,7 @@ const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://portfolio-backend-jg
 
 export function Chatbot({ onClose }: { onClose: () => void }) {
   const initialMessage: Message = {
-    content: "Hi, I can answer any questions you have about Yash! How can I help you today?",
+    content: "Hi, I am an AI Assistant that can answer any questions you have about Yash! How can I help you today?",
     sender: "bot",
   };
 
