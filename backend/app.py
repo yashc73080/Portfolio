@@ -15,7 +15,8 @@ ALLOWED_ORIGINS = [
     "https://portfolio-mu-three-91.vercel.app",
     "https://portfolio-git-main-yashs-projects-73080.vercel.app",
     "https://portfolio-pz2j1gjq9-yashs-projects-73080.vercel.app",
-    "https://portfolio-yashs-projects-73080.vercel.app"
+    "https://portfolio-yashs-projects-73080.vercel.app", 
+    "https://yashchennawar.onrender.com"
 ]
 
 # Configure CORS
