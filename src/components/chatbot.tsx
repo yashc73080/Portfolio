@@ -91,7 +91,7 @@ export function Chatbot({ onClose }: { onClose: () => void }) {
               }`}
             >
               <div
-                className={`max-w-[80%] p-2 rounded-lg ${
+                className={`max-w-[80%] p-2 rounded-lg text-sm ${
                   message.sender === "user"
                     ? "bg-foreground text-background"
                     : "bg-muted"
@@ -126,7 +126,7 @@ export function Chatbot({ onClose }: { onClose: () => void }) {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Type your message..."
-              className="flex-1"
+              className="flex-1 text-sm"
               disabled={isLoading}
             />
             <Button type="submit" size="icon" disabled={isLoading || !input.trim()}>

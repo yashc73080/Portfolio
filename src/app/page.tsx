@@ -15,6 +15,8 @@ import { Sparkles, X } from 'lucide-react';
 import Link from "next/link";
 import React, { useState } from "react";
 
+// TODO add analytics
+
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
@@ -261,7 +263,7 @@ export default function Page() {
         )}
       </button>
       {isChatOpen && (
-        <div className="fixed bottom-20 right-6 w-96 h-[30rem] bg-background border border-foreground/20 text-foreground rounded-md shadow-xl overflow-hidden flex flex-col">
+        <div className="fixed bottom-20 right-6 w-80 h-[30rem] bg-background border border-foreground/20 text-foreground rounded-md shadow-xl overflow-hidden flex flex-col">
           <Chatbot onClose={() => setIsChatOpen(false)}/>
         </div>
       )}
