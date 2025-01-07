@@ -223,7 +223,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/tripwhiz.jpeg",
+      image: "/tripwhiz-new.jpeg",
       video: "",
     },
     {
