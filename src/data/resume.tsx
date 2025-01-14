@@ -162,6 +162,38 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "Memories",
+      href: "https://memories-73080.netlify.app/",
+      dates: "Jan 2025",
+      active: true,
+      description:
+        "Built a full-stack MERN social media app with CRUD functionality. Allows users to post memories and like & delete posts.",
+      technologies: [
+        "MongoDB",
+        "Express.js",
+        "React.js",
+        "Node.js",
+        "JavaScript",
+        "Redux.js",
+        "Heroku",
+        "Netlify",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://memories-73080.netlify.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/yashc73080/Memories",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/memories.jpeg",
+      video: "",
+    },
+    {
       title: "Interactive Portfolio",
       href: "https://yashchennawar.onrender.com/",
       dates: "Dec 2024 - Jan 2025",
