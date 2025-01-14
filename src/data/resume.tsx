@@ -162,7 +162,7 @@ export const DATA = {
   ],
   projects: [
     {
-      title: "Memories",
+      title: "Memories: Social Media App",
       href: "https://memories-73080.netlify.app/",
       dates: "Jan 2025 - Present",
       active: true,

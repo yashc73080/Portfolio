@@ -59,7 +59,7 @@ Monroe Township, New Jersey
 
 # Projects
 
-## Memories
+## Memories: Social Media App
 Jan 2025 - Present
 Project
 Developed a full-stack MERN app project that can perform CRUD operations to make a simple social media app that lets users post about their memories. Used MongoDB to store users' posts. Express.js and Node.js were used for routing in the backend. React.js with Redux was used in the frontend to create a responsive UI that gets information from API routes. The frontend was deployed on Netlify and the backend was deployed on Heroku.
