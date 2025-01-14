@@ -164,7 +164,7 @@ export const DATA = {
     {
       title: "Memories",
       href: "https://memories-73080.netlify.app/",
-      dates: "Jan 2025",
+      dates: "Jan 2025 - Present",
       active: true,
       description:
         "Built a full-stack MERN social media app with CRUD functionality. Allows users to post memories and like & delete posts.",

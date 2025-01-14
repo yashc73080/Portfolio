@@ -59,8 +59,15 @@ Monroe Township, New Jersey
 
 # Projects
 
+## Memories
+Jan 2025 - Present
+Project
+Developed a full-stack MERN app project that can perform CRUD operations to make a simple social media app that lets users post about their memories. Used MongoDB to store users' posts. Express.js and Node.js were used for routing in the backend. React.js with Redux was used in the frontend to create a responsive UI that gets information from API routes. The frontend was deployed on Netlify and the backend was deployed on Heroku.
+https://memories-73080.netlify.app/
+https://github.com/yashc73080/Memories
+
 ## TripWhiz
-Oct 2024 - Present
+Oct 2024 - Jan 2025
 Project
 During a hackathon, I collaborated with my team to create the TripWhiz project, a full-stack web application for efficient trip planning. The platform generates optimized travel routes for journeys with multiple destinations. Built with Next.js and React.js, the frontend ensures a responsive user experience, while the Python and Flask backend manages route optimization. Using the Google Maps API from GCP, we incorporated real-time travel data for accuracy. To solve the traveling salesman problem (TSP), we implemented Christofides' algorithm to optimize routes. Additionally, a chatbot powered by OpenRouter API with the Llama 3.1 8b model provides personalized travel guidance. I deployed the project on Render.
 https://tripwhiz.onrender.com/
