@@ -76,7 +76,7 @@ export default function Page() {
   }, []);
 
   return (
-    <main className="flex flex-col min-h-[100dvh] space-y-10">
+    <main className="flex flex-col min-h-[100dvh] space-y-9">
       <section id="hero">
         <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 flex justify-between">
@@ -92,15 +92,6 @@ export default function Page() {
                 delay={BLUR_FADE_DELAY}
                 text={DATA.description}
               />
-              <BlurFade delay={BLUR_FADE_DELAY * 2}>
-                <TypingAnimation
-                  phrases={["Software Engineering", "Machine Learning", "Full Stack"]}
-                  typingSpeed={100}
-                  backspaceSpeed={50}
-                  pauseTime={1200}
-                  className="text-2xl font-medium"
-                />
-              </BlurFade>
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
               <Avatar className="size-28 border">
@@ -112,6 +103,19 @@ export default function Page() {
               </Avatar>
             </BlurFade>
           </div>
+        </div>
+      </section>
+      <section id="typing-animation" className="-mt-10">
+        <div className="max-w-[600px]">
+          <BlurFade delay={BLUR_FADE_DELAY * 2}>
+            <TypingAnimation
+              phrases={["Software Engineering", "Machine Learning", "Full Stack"]}
+              typingSpeed={100}
+              backspaceSpeed={50}
+              pauseTime={1200}
+              className="text-2xl font-medium"
+            />
+          </BlurFade>
         </div>
       </section>
       <section id="about">
