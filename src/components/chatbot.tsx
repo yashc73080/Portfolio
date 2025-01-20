@@ -5,8 +5,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Send, X } from 'lucide-react';
 
-// make sure text wraps into the message
-
 interface Message {
   content: string;
   sender: "user" | "bot";
@@ -23,6 +21,7 @@ export function Chatbot({ onClose }: { onClose: () => void }) {
   const [messages, setMessages] = useState<Message[]>([initialMessage]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [isFirstMessage, setIsFirstMessage] = useState(true);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const handleSendMessage = async () => {
@@ -32,6 +31,14 @@ export function Chatbot({ onClose }: { onClose: () => void }) {
     setMessages((prev) => [...prev, userMessage]);
     setInput("");
     setIsLoading(true);
+
+    if (isFirstMessage) {
+      const loadingMessage: Message = {
+        content: "Just a moment! The server is warming up (this might take up to 50 seconds for the first message).",
+        sender: "bot"
+      };
+      setMessages((prev) => [...prev, loadingMessage]);
+    }
 
     try {
       const response = await fetch(`${API_URL}/api/chat`, {
@@ -49,6 +56,12 @@ export function Chatbot({ onClose }: { onClose: () => void }) {
 
       const data = await response.json();
       
+      // Remove the loading message if it was the first message
+      if (isFirstMessage) {
+        setMessages((prev) => prev.filter(msg => msg.content !== "Please wait up to 50 seconds for the first response."));
+        setIsFirstMessage(false);
+      }
+
       const botMessage: Message = {
         content: data.response.answer || "Sorry, I couldn't generate a response.",
         sender: "bot",
@@ -74,7 +87,7 @@ export function Chatbot({ onClose }: { onClose: () => void }) {
   return (
     <>
       <div className="relative flex flex-col h-full bg-background text-text">
-      <Button
+        <Button
           variant="ghost"
           size="icon"
           className="absolute right-2 top-2 z-10"
