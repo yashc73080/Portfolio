@@ -162,9 +162,36 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "Frantry",
+      href: "https://github.com/yashc73080/Frantry",
+      dates: "Feb 2025 - Present",
+      active: true,
+      description:
+        "Developed iOS and Android mobile app to scan receipts with OCR, track pantry items, predict shelf life, and generate recipes with AI to reduce food waste.",
+      technologies: [
+        "React Native",
+        "Express.js",
+        "Node.js",
+        "MongoDB",
+        "TypeScript",
+        "Google Cloud Platform",
+        "OpenRouter",
+        "Expo Go",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/yashc73080/Frantry",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/frantry.jpg",
+      video: "",
+    },
+    {
       title: "Memories: Social Media App",
       href: "https://memories-73080.netlify.app/",
-      dates: "Jan 2025 - Present",
+      dates: "Jan 2025",
       active: true,
       description:
         "Built a full-stack MERN social media app with CRUD functionality. Allows users to post memories and like & delete posts.",
@@ -230,7 +257,7 @@ export const DATA = {
     {
       title: "TripWhiz",
       href: "https://tripwhiz.onrender.com/",
-      dates: "Oct 2024 - Present",
+      dates: "Oct 2024 - Jan 2025",
       active: true,
       description:
         "Creating a web app that optimizes multi-destination travel routes and provides personalized travel guidance via an AI-powered chatbot.",
@@ -462,12 +489,28 @@ export const DATA = {
   ],
   hackathons: [
     {
+      title: "HackRU Spring 2025 - Winner",
+      dates: "February 1-2, 2025",
+      location: "Piscataway, NJ",
+      description:
+        "Developed Frantry: Mobile app to scan receipts, track pantry items, predict shelf life, and generate recipes with AI to reduce food waste. Won Wakefern's Overall Best Project Award.",
+      image: "/hackru_s25.jpg",
+      mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2025/mlh-trust-badge-2025-white.svg",
+      links: [
+        {
+          title: "Source",
+          icon: <Icons.github className="h-4 w-4" />,
+          href: "https://github.com/yashc73080/Frantry",
+        },
+      ],
+    },
+    {
       title: "HackRU Fall 2024",
       dates: "October 26-27, 2024",
       location: "New Brunswick, NJ",
       description:
         "Developed TripWhiz: AI-powered trip itinerary planner that optimizes travel routes and provides personalized guidance.",
-      image: "/hackru_spring24.png",
+      image: "/hackru_fall24.png",
       mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-white.svg",
       links: [
         {

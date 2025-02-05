@@ -59,8 +59,15 @@ Monroe Township, New Jersey
 
 # Projects
 
+## Frantry
+Feb 2025 - Present
+Project
+For a hackathon, developed cross-platform mobile app for iOS and Android project that scans receipts using OCR, extracts text and infers shelf life based on food name, and stores this information in a MongoDB database. A pantry is then populated using the database, with color-coded values based on how much more time there is before the item expires. Recipes are then generated prioritizing the food items in the pantry that are expiring soon. Llama from OpenRouter was used for shelf life inferences and recipe generation. Google Cloud Vision from Google Cloud Platform was used for the OCR receipt scanner. The app was tested on the Android simulator Expo Go. 
+This was a hackathon project and we won Wakefern's Overall Best Project award. 
+https://github.com/yashc73080/Frantry
+
 ## Memories: Social Media App
-Jan 2025 - Present
+Jan 2025
 Project
 Developed a full-stack MERN app project that can perform CRUD operations to make a simple social media app that lets users post about their memories. Used MongoDB to store users' posts. Express.js and Node.js were used for routing in the backend. React.js with Redux was used in the frontend to create a responsive UI that gets information from API routes. The frontend was deployed on Netlify and the backend was deployed on Heroku.
 https://memories-73080.netlify.app/
@@ -161,6 +168,7 @@ Club
 - Node.js
 - Next
 - React
+- React Native
 - REST API
 - Spring-Boot
 - Maven
