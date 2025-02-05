@@ -73,6 +73,13 @@ Developed a full-stack MERN app project that can perform CRUD operations to make
 https://memories-73080.netlify.app/
 https://github.com/yashc73080/Memories
 
+## Portfolio
+Dec 2024 - Jan 2025
+Project
+Developed a full-stack portfolio website project to showcase my experiences, projects, and skills. I built the front end with Next.js, React.js, and Typescript. I integrated an AI chatbot using the OpenAI API with a Python backend. This RAG-powered chatbot was given context about me through Pinecone and LangChain to answer questions about me. I connected the front and back ends with Flask and deployed both on Render.
+https://yashchennawar.onrender.com/
+https://github.com/yashc73080/Portfolio 
+
 ## TripWhiz
 Oct 2024 - Jan 2025
 Project
