@@ -78,7 +78,7 @@ class Chatbot:
         # Allow time for indexing
         time.sleep(5)
 
-    def initialize_retrieval_chain(self, llm_model_name, retrieval_qa_chat_prompt_path):
+    def initialize_retrieval_chain(self, llm_model_name, retrieval_qa_chat_prompt_path, top_k=5):
         """Initialize the retrieval chain using LangChain."""
         # Create LLM with base configuration
         llm = ChatOpenAI(
@@ -98,7 +98,7 @@ class Chatbot:
             MessagesPlaceholder(variable_name="chat_history"),
         ])
 
-        retriever = self.docsearch.as_retriever()
+        retriever = self.docsearch.as_retriever(top_k=top_k)
         
         # Create the chain with the new prompt
         combine_docs_chain = create_stuff_documents_chain(
@@ -139,6 +139,8 @@ if __name__ == "__main__":
     MODEL_NAME = 'multilingual-e5-large'
     RETRIEVAL_QA_CHAT_PROMPT_PATH = "langchain-ai/retrieval-qa-chat"
     LLM_MODEL_NAME = "meta-llama/llama-3.2-3b-instruct:free"
+    # CHUNK_SIZE = 300
+    TOP_K = 5
 
     # Initialize chatbot
     chatbot = Chatbot(
@@ -158,7 +160,7 @@ if __name__ == "__main__":
     chatbot.upsert_documents(md_header_splits)
 
     # Initialize retrieval chain
-    chatbot.initialize_retrieval_chain(LLM_MODEL_NAME, RETRIEVAL_QA_CHAT_PROMPT_PATH)
+    chatbot.initialize_retrieval_chain(LLM_MODEL_NAME, RETRIEVAL_QA_CHAT_PROMPT_PATH, top_k=TOP_K)
 
     # Query chatbot
     while True:

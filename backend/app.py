@@ -39,13 +39,15 @@ chatbot = Chatbot(
 )
 
 # Initialize chatbot components
-md_header_splits = chatbot.load_markdown([("#", "Header 1"), ("##", "Header 2"), ("###", "Header 3")])
+headers_to_split_on = [("#", "Header 1"), ("##", "Header 2"), ("###", "Header 3")]
+md_header_splits = chatbot.load_markdown(headers_to_split_on)
 chatbot.initialize_embeddings('multilingual-e5-large')
 chatbot.setup_pinecone_index(dimension=chatbot.embeddings.dimension)
 chatbot.upsert_documents(md_header_splits)
 chatbot.initialize_retrieval_chain(
     "meta-llama/llama-3.2-3b-instruct:free",
-    "langchain-ai/retrieval-qa-chat"
+    "langchain-ai/retrieval-qa-chat",
+    top_k=5
 )
 
 @app.route('/api/chat', methods=['POST'])
