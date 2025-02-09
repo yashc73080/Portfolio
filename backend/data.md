@@ -62,7 +62,7 @@ Monroe Township, New Jersey
 ## Frantry
 Feb 2025 - Present
 Project
-For a hackathon, developed cross-platform mobile app for iOS and Android project that scans receipts using OCR, extracts text and infers shelf life based on food name, and stores this information in a MongoDB database. A pantry is then populated using the database, with color-coded values based on how much more time there is before the item expires. Recipes are then generated prioritizing the food items in the pantry that are expiring soon. Llama from OpenRouter was used for shelf life inferences and recipe generation. Google Cloud Vision from Google Cloud Platform was used for the OCR receipt scanner. The app was tested on the Android simulator Expo Go. 
+For a hackathon, developed cross-platform mobile app for iOS and Android project that scans receipts using OCR, extracts text and infers shelf life based on food name, and stores this information in a MongoDB database. A pantry is then populated using the database, with color-coded values based on how much more time there is before the item expires. Recipes are then generated prioritizing the food items in the pantry that are expiring soon. Llama from OpenRouter was used for shelf life inferences and recipe generation. Google Cloud Vision from Google Cloud Platform was used for the OCR receipt scanner. We used React Native for the frontend, and Express.js and Node.js for the backend. MongoDB was used to manage the pantry database. The app was tested on the Android simulator Expo Go. 
 This was a hackathon project and we won Wakefern's Overall Best Project award. 
 https://github.com/yashc73080/Frantry
 
