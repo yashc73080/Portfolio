@@ -489,12 +489,12 @@ export const DATA = {
   ],
   hackathons: [
     {
-      title: "HackRU Spring 2025 - Winner",
+      title: "HackRU Spring 2025 ~ Winner",
       dates: "February 1-2, 2025",
       location: "Piscataway, NJ",
       description:
         "Developed Frantry: Mobile app to scan receipts, track pantry items, predict shelf life, and generate recipes with AI to reduce food waste. Won Wakefern's Overall Best Project Award.",
-      image: "/hackru_s25.jpg",
+      image: "/hackru_s25.JPG",
       mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2025/mlh-trust-badge-2025-white.svg",
       links: [
         {
