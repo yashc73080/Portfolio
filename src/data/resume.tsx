@@ -10,7 +10,7 @@ export const DATA = {
   description:
     "AI enthusiast and builder. Passionate about coding, solving problems, and creating impactful projects.",
   summary:
-    "My name is Yash Chennawar, and I'm an aspiring ML Engineer passionate about AI, software development, and quantum computing. Currently, I'm a research assistant exploring brain-inspired neural networks and their applications in deep learning. I've built AI-driven apps, VR healthcare simulations, and machine learning solutions, always striving to innovate and learn.",
+    "My name is Yash Chennawar, and I'm an aspiring ML Engineer passionate about AI, software development, and quantum computing. I study computer science at Rutgers University-New Brunswick Honors College. Currently, I'm a research assistant exploring brain-inspired neural networks and their applications in deep learning. I've built AI-driven apps, VR healthcare simulations, and machine learning solutions, always striving to innovate and learn.",
   avatarUrl: "",
   skills: [
     "Python",
