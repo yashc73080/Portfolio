@@ -62,6 +62,25 @@ export const DATA = {
 
   work: [
     {
+      company: "Ryan, LLC",
+      href: "https://ryan.com/",
+      badges: [],
+      location: "Dallas, TX",
+      title: "Incoming Technology Intern  ",
+      logoUrl: "/ryan.png",
+      start: "May 2025",
+      end: "August 2025",
+      description:
+        "",
+      links: [
+        {
+          type: "Ryan",
+          href: "https://ryan.com/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+    },
+    {
       company: "Rutgers University - CABM",
       href: "https://cabm.rutgers.edu/research/milstein-lab",
       badges: [],

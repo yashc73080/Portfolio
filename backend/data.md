@@ -18,8 +18,12 @@ Coursework: Introduction to Artificial Intelligence, Introduction to Data Scienc
 
 # Technical/Work Experience
 
-## Rutgers University - CABM
+## Ryan, LLC
+### Incoming Technology Intern
+May 2025 - August 2025
+Dallas, TX
 
+## Rutgers University - CABM
 ### Undergraduate Research Assistant
 May 2024 - Present
 Piscataway, NJ
