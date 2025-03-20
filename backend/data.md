@@ -13,6 +13,9 @@ Graduating May 2027
 Bachelor of Science: Computer Science and Mathematics Double Major, Data Science Minor
 GPA: 3.8/4.0
 
+### Societies
+Societies: Phi Beta Kappa Honor Society
+
 ### Coursework
 Coursework: Introduction to Artificial Intelligence, Introduction to Data Science, Computer Architecture, Data Structures, Principles of Information and Data Management, Design and Analysis of Computer Algorithms, Discrete Structures (I & II), Linear Algebra, Elementary Differential Equations, Calculus III, Probability Theory
 

@@ -169,7 +169,7 @@ export const DATA = {
       logoUrl: "/rutgers.png",
       start: "2023",
       end: "Present",
-      description: "Coursework: Introduction to Artificial Intelligence, Introduction to Data Science, Computer Architecture, Data Structures, Principles of Information and Data Management, Design and Analysis of Computer Algorithms, Discrete Structures (I & II), Linear Algebra, Elementary Differential Equations, Calculus III, Probability Theory",
+      description: "**Societies**: Phi Beta Kappa Honor Society\n**Coursework**: Introduction to Artificial Intelligence, Introduction to Data Science, Computer Architecture, Data Structures, Principles of Information and Data Management, Design and Analysis of Computer Algorithms, Discrete Structures (I & II), Linear Algebra, Elementary Differential Equations, Calculus III, Probability Theory",
       links: [
         {
           type: "Rutgers Honors College",
