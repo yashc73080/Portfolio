@@ -546,6 +546,22 @@ export const DATA = {
   ],
   hackathons: [
     {
+      title: "Bank of America Code-A-Thon ~ Finalist",
+      dates: "March 16-23, April 9-11 2025",
+      location: "Charlotte, NC",
+      description:
+        "Developed WeDormin?: A web app to help college students find roommates & housing, and get personalized roommate recommendations. We advanced to the finals at the BofA headquarters.",
+      image: "/bofa.png",
+      mlh: "",
+      links: [
+        {
+          title: "Source",
+          icon: <Icons.github className="h-4 w-4" />,
+          href: "https://github.com/fwakks/WeDormin",
+        },
+      ],
+    },
+    {
       title: "HackRU Spring 2025 ~ Winner",
       dates: "February 1-2, 2025",
       location: "Piscataway, NJ",
