@@ -66,6 +66,16 @@ Monroe Township, New Jersey
 
 # Projects
 
+## WeDormin?
+Mar 2025 - Present
+Project
+Built a full-stack roommate and housing selection platform to assist university students in finding suitable housing and roommates. The platform allows users to browse Rutgers on- and off-campus housing listings, either in a searchable list or visually on a Google Maps integration. Users can also explore potential roommates, with robust filtering and search capabilities for both housing and roommate options.
+To facilitate connections, we built an in-app direct messaging system where users can chat with potential roommates. AI-powered roommate matching was implemented using Spring AI with OpenAI embeddings, stored and queried via PGVector in PostgreSQL.
+The frontend was developed with Next.js and React.js (JavaScript), while the backend was built with Spring Boot (Java) using JDBC for database operations. Authentication was handled through Spring Security with OAuth2. Data scraping for housing listings was completed using BeautifulSoup (Python) and Puppeteer (JavaScript). The PostgreSQL database was hosted on Supabase, and the application was deployed to Render with Docker for containerization.
+This was a hackathon project and we advanced to the finals for the Bank of America Code-A-Thon in Charlotte, North Carolina.
+https://wedormin-nsh5.onrender.com/
+https://github.com/fwakks/WeDormin
+
 ## Frantry
 Feb 2025 - Present
 Project

@@ -181,6 +181,44 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "WeDormin?",
+      href: "https://wedormin-nsh5.onrender.com/",
+      dates: "Mar 2025 - Present",
+      active: true,
+      description:
+        "Created a web app to help college students find roommates and housing. Users can create profiles, search for roommates, and find available dorms. Integrated AI to match users based on preferences.",
+      technologies: [
+        "Next.js",
+        "React.js",
+        "Node.js",
+        "JavaScript",
+        "Spring-Boot",
+        "JDBC",
+        "Java",
+        "PostgreSQL",
+        "Supabase",
+        "Puppeteer",
+        "Google Cloud Platform",
+        "OpenAI",
+        "Docker",
+        "Render",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://wedormin-nsh5.onrender.com/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/fwakks/WeDormin",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/wedormin.jpeg",
+      video: "",
+    },
+    {
       title: "Frantry",
       href: "https://github.com/yashc73080/Frantry",
       dates: "Feb 2025 - Present",

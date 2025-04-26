@@ -245,7 +245,7 @@ export default function Page() {
                   Building things with friends
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  I love participating in hackathons and learning about the wonderful and innovative ideas from my 
+                  I love participating in hackathons and learning about wonderful and innovative ideas from my 
                   teammates and other groups.
                 </p>
               </div>
