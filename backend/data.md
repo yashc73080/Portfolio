@@ -76,6 +76,12 @@ This was a hackathon project and we advanced to the finals for the Bank of Ameri
 https://wedormin-nsh5.onrender.com/
 https://github.com/fwakks/WeDormin
 
+## RUControversial
+Mar 2025 - May 2025
+Project
+Developed an NLP-powered tool that predicts how audiences might react to social media content on Reddit before posting. The project implements a fine-tuned DeBERTa-v3 transformer model (44M parameters) to analyze text and classify potential reactions based on r/AITA patterns. Built using PyTorch and HuggingFace's transformers library, the model achieved 63.4% accuracy despite significant class imbalance challenges. The tech stack includes Python for data processing, PostgreSQL/Supabase for data storage, scikit-learn for baseline modeling, spaCy for text preprocessing, and CUDA-optimized training on HPC infrastructure. This project demonstrates practical application of transformer architectures to social sentiment analysis, addressing a real-world challenge of predicting audience reception in online spaces.
+https://github.com/yashc73080/RUControversial
+
 ## Frantry
 Feb 2025 - Present
 Project

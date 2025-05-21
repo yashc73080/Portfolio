@@ -219,6 +219,34 @@ export const DATA = {
       video: "",
     },
     {
+      title: "RUControversial",
+      href: "https://github.com/yashc73080/RUControversial",
+      dates: "Mar 2025 - May 2025",
+      active: true,
+      description:
+        "Developed an NLP-powered tool to predict audience reactions to Reddit posts before publishing, leveraging a fine-tuned DeBERTa-v3 transformer model for social sentiment prediction.",
+      technologies: [
+        "Python",
+        "PyTorch",
+        "Scikit-Learn",
+        "HuggingFace",
+        "Transformers",
+        "PostgreSQL",
+        "Supabase",
+        "CUDA",
+        "HPC",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/yashc73080/RUControversial",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/rucontroversial.png",
+      video: "",
+    },
+    {
       title: "Frantry",
       href: "https://github.com/yashc73080/Frantry",
       dates: "Feb 2025 - Present",
@@ -547,7 +575,7 @@ export const DATA = {
   hackathons: [
     {
       title: "Bank of America Code-A-Thon ~ Finalist",
-      dates: "March 16-23, April 9-11 2025",
+      dates: "March 16-23, April 9-11, 2025",
       location: "Charlotte, NC",
       description:
         "Developed WeDormin?: A web app to help college students find roommates & housing, and get personalized roommate recommendations. We advanced to the finals at the BofA headquarters.",
