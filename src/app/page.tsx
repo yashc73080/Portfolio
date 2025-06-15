@@ -284,7 +284,7 @@ export default function Page() {
                   Campus Involvement
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Organizations I'm involved with at Rutgers University.
+                  Organizations I&apos;m involved with at Rutgers University.
                 </p>
               </div>
             </div>
