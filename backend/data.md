@@ -22,9 +22,14 @@ Coursework: Introduction to Artificial Intelligence, Introduction to Data Scienc
 # Technical/Work Experience
 
 ## Ryan, LLC
-### Incoming Technology Intern
+### Software Engineer Intern
 May 2025 - August 2025
 Dallas, TX
+- As a Platform Executive, developing software to extract information from invoices for large corporate tax firm
+- Evaluating 3 methods: GPT Vision API, OCR + GPT, Azure Document Intelligence + GPT, based on performance and cost
+- Implementing end-to-end deep learning model for invoice classification
+- Using Azure and Databricks with Python and JuPyter to improve the tax.com system with ML by reducing costs
+- Collaborating with data engineers and various tax specialists for interdisciplinary insights
 
 ## Rutgers University - CABM
 ### Undergraduate Research Assistant
@@ -165,6 +170,13 @@ https://github.com/yashc73080/Stock-Prediction-Model
 
 # Extracurricular Activities
 
+## Rutgers Grey Matter Society
+### Director of Technology and AI
+May 2025 - Present
+Club
+- Lead AI/neuroscience projects and manage the club’s digital tools, platforms, and website
+- Direct tech and engineering committees to host workshops, resolve technical issues, and support innovation
+
 ## RU Autonomous (AIAA)
 ### Imaging Subteam
 September 2023 - Present
@@ -208,6 +220,8 @@ Club
 - Git
 - Firebase
 - AWS
+- Azure
+- Databricks
 - GCP
 - Pinecone
 - Linux
