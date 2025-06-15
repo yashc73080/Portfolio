@@ -23,6 +23,7 @@ export const DATA = {
     "LangChain",
     "PostgreSQL",
     "JDBC",
+    "Spring-Boot",
     "C",
     "C++",
     "C#",
@@ -71,11 +72,16 @@ export const DATA = {
       start: "May 2025",
       end: "August 2025",
       description:
-        "",
+        "As a Platform Executive, developing software to extract information from invoices for large corporate tax firm. Evaluating 3 methods: GPT Vision API, OCR + GPT, Azure Document Intelligence + GPT, based on performance and cost. Implementing end-to-end deep learning model for invoice classification. Using Azure and Databricks with Python and JuPyter to improve the tax.com system with ML by reducing costs. Collaborating with data engineers and various tax specialists for interdisciplinary insights.",
       links: [
         {
           type: "Ryan",
           href: "https://ryan.com/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "tax.com",
+          href: "https://tax.com/",
           icon: <Icons.globe className="size-3" />,
         },
       ],
@@ -90,12 +96,17 @@ export const DATA = {
       start: "May 2024",
       end: "Present",
       description:
-        "Engineer neural networks inspired by biological brain mechanisms to advance pattern discrimination tasks as solutions for the deep learning synaptic credit assignment problem under the guidance of Dr. Aaron Milstein. Develop with PyTorch in Python for building and fine-tuning neural network models for spiral and MNIST datasets. Conduct validation to optimize network performance with HPC multithreading on Linux compute cluster with shell scripts.",
+        "Engineer neural networks inspired by biological brain mechanisms to advance pattern discrimination tasks as solutions for the deep learning synaptic credit assignment problem under the guidance of Dr. Aaron Milstein. Develop with PyTorch in Python for building and fine-tuning neural network models for spiral and MNIST datasets. Conduct validation to optimize network performance with HPC multithreading on Linux compute cluster with shell scripts. Working on publishing a paper.",
       links: [
         {
           type: "Lab",
           href: "https://cabm.rutgers.edu/research/milstein-lab",
           icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Paper",
+          href: "https://www.biorxiv.org/content/10.1101/2025.05.22.655599v2",
+          icon: <FileText className="size-3" />,
         },
         {
           type: "Source",
@@ -634,6 +645,46 @@ export const DATA = {
           title: "Source",
           icon: <Icons.github className="h-4 w-4" />,
           href: "https://github.com/yashc73080/HackRUS2024",
+        },
+      ],
+    },
+  ],
+  clubs: [
+    {
+      company: "Rutgers Grey Matter Society",
+      badges: [],
+      href: "",
+      location: "New Brunswick, NJ",
+      title: "Director of Technology and AI",
+      logoUrl: "/gms.png",
+      start: "May 2025",
+      end: "Present",
+      description: 
+        "Lead AI/neuroscience projects and manage the club's digital tools, platforms, and website. Direct tech and engineering committees to host workshops, resolve technical issues, and support innovation.",
+      links: [
+        {
+          type: "The Grey Matter Project",
+          href: "https://medicine.yale.edu/neurology/education/grey-matter-project/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+    },
+    {
+      company: "RU Autonomous (AIAA)",
+      badges: [],
+      href: "",
+      location: "Piscataway, NJ",
+      title: "Imaging Subteam Member",
+      logoUrl: "/ruautonomous.png",
+      start: "September 2023",
+      end: "May 2024",
+      description: 
+        "Developed autonomous aircraft to complete waypoint navigation, image capture, target recognition, and air delivery. Used Python to create computer vision ML models for image recognition with convolutional neural networks.",
+      links: [
+        {
+          type: "AIAA",
+          href: "https://aiaa.rutgers.edu/",
+          icon: <Icons.globe className="size-3" />,
         },
       ],
     },

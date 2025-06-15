@@ -1,5 +1,5 @@
 "use client";
-
+// TODO add clubs
 import { DATA } from "@/data/resume";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
@@ -270,6 +270,44 @@ export default function Page() {
               ))}
             </ul>
           </BlurFade>
+        </div>
+      </section>
+      <section id="clubs">
+        <div className="flex min-h-0 flex-col gap-y-3">
+          <BlurFade delay={BLUR_FADE_DELAY * 17}>
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                  Clubs
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  Campus Involvement
+                </h2>
+                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Organizations I'm involved with at Rutgers University.
+                </p>
+              </div>
+            </div>
+          </BlurFade>
+          {DATA.clubs.map((club, id) => (
+            <BlurFade
+              key={club.company}
+              delay={BLUR_FADE_DELAY * 18 + id * 0.05}
+            >
+              <ResumeCard
+                key={club.company}
+                logoUrl={club.logoUrl}
+                altText={club.company}
+                title={club.company}
+                subtitle={club.title}
+                href={club.href}
+                badges={club.badges}
+                period={`${club.start} - ${club.end ?? "Present"}`}
+                description={club.description}
+                links={club.links}
+              />
+            </BlurFade>
+          ))}
         </div>
       </section>
       <section id="contact">
