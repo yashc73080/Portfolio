@@ -10,14 +10,14 @@ https://www.github.com/yashc73080
 Rutgers University-New Brunswick
 In the Honors College
 Graduating May 2027
-Bachelor of Science: Computer Science and Mathematics Double Major, Data Science Minor
+Bachelor of Science: Computer Science and Data Science Double Major, Mathematics Minor
 GPA: 3.8/4.0
 
 ### Societies
 Societies: Phi Beta Kappa Honor Society
 
 ### Coursework
-Coursework: Introduction to Artificial Intelligence, Introduction to Data Science, Computer Architecture, Data Structures, Principles of Information and Data Management, Design and Analysis of Computer Algorithms, Discrete Structures (I & II), Linear Algebra, Elementary Differential Equations, Calculus III, Probability Theory
+Coursework: Introduction to Deep Learning, Introduction to Artificial Intelligence, Introduction to Data Science, Computer Architecture, Data Structures, Tensor Networks as a bridge between Neural Networks and Quantum Physics, Principles of Information and Data Management, Design and Analysis of Computer Algorithms, Discrete Structures (I & II), Linear Algebra, Elementary Differential Equations, Calculus III, Probability Theory
 
 # Technical/Work Experience
 
@@ -25,20 +25,18 @@ Coursework: Introduction to Artificial Intelligence, Introduction to Data Scienc
 ### Software Engineer Intern
 May 2025 - August 2025
 Dallas, TX
-- As a Platform Executive, developing software to extract information from invoices for large corporate tax firm
-- Evaluating 3 methods: GPT Vision API, OCR + GPT, Azure Document Intelligence + GPT, based on performance and cost
-- Implementing end-to-end deep learning model for invoice classification
-- Using Azure and Databricks with Python and JuPyter to improve the tax.com system with ML by reducing costs
-- Collaborating with data engineers and various tax specialists for interdisciplinary insights
+- As a Platform Executive, develop an ML pipeline on Azure & Databricks to automate contract data extraction for leading corporate tax firm.
+- Reduced costs by 99% after evaluating 3 methods: GPT Vision, OCR+GPT, and Azure Document Intelligence. 
+- Collaborated with data engineers and tax experts to enhance tax.com workflows with AI, significantly optimizing document processing while maintaining performance.
 
 ## Rutgers University - CABM
 ### Undergraduate Research Assistant
 May 2024 - Present
 Piscataway, NJ
-- At Rutgers University - CABM (Center for Advanced Biotechnology and Medicine), part of work experience as an undergraduate research assistant
-- Engineer neural networks inspired by biological brain mechanisms to advance pattern discrimination tasks as solutions for the deep learning synaptic credit assignment problem under the guidance of Dr. Aaron Milstein
-- Develop with PyTorch in Python for building and fine-tuning neural network models for spiral and MNIST datasets
-- Conduct validation to optimize performance with HPC multithreading on Linux compute cluster with shell scripts
+- Research and develop neural networks inspired by biological brain mechanisms to advance pattern discrimination tasks as solutions for the deep learning synaptic credit assignment problem, and publishing a paper for Neuron. 
+- Leverage PyTorch in Python for building and fine-tuning neural network models for spiral and MNIST datasets. 
+- Conduct validation to optimize performance with HPC multithreading on Linux compute cluster with shell scripts. 
+- Began researching through Aresty Summer Science.
 
 ## Headstarter AI
 ### Software Engineer Fellow

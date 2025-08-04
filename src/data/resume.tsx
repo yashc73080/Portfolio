@@ -11,7 +11,7 @@ export const DATA = {
     "AI enthusiast and builder. Passionate about coding, solving problems, and creating impactful projects.",
   summary:
     "My name is Yash Chennawar, and I'm an aspiring ML Engineer passionate about AI, software development, and quantum computing. I study computer science at Rutgers University-New Brunswick Honors College. Currently, I'm a research assistant exploring brain-inspired neural networks and their applications in deep learning. I've built AI-driven apps, VR healthcare simulations, and machine learning solutions, always striving to innovate and learn.",
-  avatarUrl: "",
+  avatarUrl: "/yashchennawar.jpg",
   skills: [
     "Python",
     "Java",
@@ -31,6 +31,10 @@ export const DATA = {
     "Shell",
     "MongoDB",
     "Unity",
+    "AWS",
+    "Azure",
+    "Google Cloud Platform",
+    "Databricks",
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -72,7 +76,7 @@ export const DATA = {
       start: "May 2025",
       end: "August 2025",
       description:
-        "As a Platform Executive, developing software to extract information from invoices for large corporate tax firm. Evaluating 3 methods: GPT Vision API, OCR + GPT, Azure Document Intelligence + GPT, based on performance and cost. Implementing end-to-end deep learning model for invoice classification. Using Azure and Databricks with Python and JuPyter to improve the tax.com system with ML by reducing costs. Collaborating with data engineers and various tax specialists for interdisciplinary insights.",
+        "As a Platform Executive, develop an ML pipeline on Azure & Databricks to automate contract data extraction for the leading corporate tax firm. Reduced costs by 99% after evaluating 3 methods: GPT Vision, OCR+GPT, and Azure Document Intelligence. Collaborated with data engineers and tax experts to enhance tax.com workflows with AI, significantly optimizing document processing while maintaining performance.",
       links: [
         {
           type: "Ryan",
@@ -96,7 +100,7 @@ export const DATA = {
       start: "May 2024",
       end: "Present",
       description:
-        "Engineer neural networks inspired by biological brain mechanisms to advance pattern discrimination tasks as solutions for the deep learning synaptic credit assignment problem under the guidance of Dr. Aaron Milstein. Develop with PyTorch in Python for building and fine-tuning neural network models for spiral and MNIST datasets. Conduct validation to optimize network performance with HPC multithreading on Linux compute cluster with shell scripts. Working on publishing a paper.",
+        "Research and develop neural networks inspired by biological brain mechanisms to advance pattern discrimination tasks as solutions for the deep learning synaptic credit assignment problem, and publishing a paper for Neuron. Leverage PyTorch in Python for building and fine-tuning neural network models for spiral and MNIST datasets. Conduct validation to optimize performance with HPC multithreading on Linux compute cluster with shell scripts. Began researching through Aresty Summer Science. Working with Dr. Aaron Milstein and PhD students.",
       links: [
         {
           type: "Lab",
@@ -176,11 +180,11 @@ export const DATA = {
     {
       school: "Rutgers University-New Brunswick, Honors College",
       href: "https://newbrunswick.rutgers.edu/",
-      degree: "BS in Computer Science and Mathematics, Minor in Data Science",
+      degree: "BS in Computer Science and Data Science, Minor in Mathematics",
       logoUrl: "/rutgers.png",
       start: "2023",
       end: "Present",
-      description: "**Societies**: Phi Beta Kappa Honor Society\n**Coursework**: Introduction to Artificial Intelligence, Introduction to Data Science, Computer Architecture, Data Structures, Principles of Information and Data Management, Design and Analysis of Computer Algorithms, Discrete Structures (I & II), Linear Algebra, Elementary Differential Equations, Calculus III, Probability Theory",
+      description: "**Societies**: Phi Beta Kappa Honor Society\n**Coursework**: Introduction to Deep Learning, Introduction to Artificial Intelligence, Introduction to Data Science, Tensor Networks as a bridge between Neural Networks and Quantum Physics, Computer Architecture, Data Structures, Principles of Information and Data Management, Design and Analysis of Computer Algorithms, Discrete Structures (I & II), Linear Algebra, Elementary Differential Equations, Calculus III, Probability Theory",
       links: [
         {
           type: "Rutgers Honors College",
