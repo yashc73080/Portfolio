@@ -45,7 +45,7 @@ chatbot.initialize_embeddings('multilingual-e5-large')
 chatbot.setup_pinecone_index(dimension=chatbot.embeddings.dimension)
 chatbot.upsert_documents(md_header_splits)
 chatbot.initialize_retrieval_chain(
-    "meta-llama/llama-3.2-3b-instruct:free",
+    "meta-llama/llama-3.3-70b-instruct:free",
     "langchain-ai/retrieval-qa-chat",
     top_k=5
 )

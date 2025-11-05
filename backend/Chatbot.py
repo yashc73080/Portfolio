@@ -138,7 +138,7 @@ if __name__ == "__main__":
     HEADERS_TO_SPLIT_ON = [("#", "Header 1"), ("##", "Header 2"), ("###", "Header 3")]
     MODEL_NAME = 'multilingual-e5-large'
     RETRIEVAL_QA_CHAT_PROMPT_PATH = "langchain-ai/retrieval-qa-chat"
-    LLM_MODEL_NAME = "meta-llama/llama-3.2-3b-instruct:free"
+    LLM_MODEL_NAME = "meta-llama/llama-3.3-70b-instruct:free"
     # CHUNK_SIZE = 300
     TOP_K = 5
 
