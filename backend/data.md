@@ -69,8 +69,20 @@ Monroe Township, New Jersey
 
 # Projects
 
+## SkillSync
+Oct 2025 - Oct 2025
+Project
+Built an AI-powered platform for automated team role assignment, using a Next.js frontend and a FastAPI backend, and relies heavily on Gemini Embeddings (models/embedding-001) and cosine similarity via scikit-learn and NumPy for semantic skill matching. The platform executes an end-to-end workflow: Gemini 2.5 Flash Lite is first used for dynamic project specification and complementary role derivation, while comprehensive skill data is gathered by integrating with the GitHub API and processing resumes using pdfplumber and Google Cloud Vision OCR, all culminating in a transparent, skills-based team assignment.
+https://github.com/yashc73080/hackruf25
+
+## RUControversial
+Mar 2025 - May 2025
+Project
+Developed an NLP-powered tool that predicts how audiences might react to social media content on Reddit before posting. The project implements a fine-tuned DeBERTa-v3 transformer model (44M parameters) to analyze text and classify potential reactions based on r/AITA patterns. Built using PyTorch and HuggingFace's transformers library, the model achieved 63.4% accuracy despite significant class imbalance challenges. The tech stack includes Python for data processing, PostgreSQL/Supabase for data storage, scikit-learn for baseline modeling, spaCy for text preprocessing, and CUDA-optimized training on HPC infrastructure. This project demonstrates practical application of transformer architectures to social sentiment analysis, addressing a real-world challenge of predicting audience reception in online spaces.
+https://github.com/yashc73080/RUControversial
+
 ## WeDormin?
-Mar 2025 - Present
+Mar 2025 - Apr 2025
 Project
 Built a full-stack roommate and housing selection platform to assist university students in finding suitable housing and roommates. The platform allows users to browse Rutgers on- and off-campus housing listings, either in a searchable list or visually on a Google Maps integration. Users can also explore potential roommates, with robust filtering and search capabilities for both housing and roommate options.
 To facilitate connections, we built an in-app direct messaging system where users can chat with potential roommates. AI-powered roommate matching was implemented using Spring AI with OpenAI embeddings, stored and queried via PGVector in PostgreSQL.
@@ -79,14 +91,8 @@ This was a hackathon project and we advanced to the finals for the Bank of Ameri
 https://wedormin-nsh5.onrender.com/
 https://github.com/fwakks/WeDormin
 
-## RUControversial
-Mar 2025 - May 2025
-Project
-Developed an NLP-powered tool that predicts how audiences might react to social media content on Reddit before posting. The project implements a fine-tuned DeBERTa-v3 transformer model (44M parameters) to analyze text and classify potential reactions based on r/AITA patterns. Built using PyTorch and HuggingFace's transformers library, the model achieved 63.4% accuracy despite significant class imbalance challenges. The tech stack includes Python for data processing, PostgreSQL/Supabase for data storage, scikit-learn for baseline modeling, spaCy for text preprocessing, and CUDA-optimized training on HPC infrastructure. This project demonstrates practical application of transformer architectures to social sentiment analysis, addressing a real-world challenge of predicting audience reception in online spaces.
-https://github.com/yashc73080/RUControversial
-
 ## Frantry
-Feb 2025 - Present
+Feb 2025 - Mar 2025
 Project
 For a hackathon, developed cross-platform mobile app for iOS and Android project that scans receipts using OCR, extracts text and infers shelf life based on food name, and stores this information in a MongoDB database. A pantry is then populated using the database, with color-coded values based on how much more time there is before the item expires. Recipes are then generated prioritizing the food items in the pantry that are expiring soon. Llama from OpenRouter was used for shelf life inferences and recipe generation. Google Cloud Vision from Google Cloud Platform was used for the OCR receipt scanner. We used React Native for the frontend, and Express.js and Node.js for the backend. MongoDB was used to manage the pantry database. We used Postman to test our API links. The app was tested on the Android simulator Expo Go. 
 This was a hackathon project and we won Wakefern's Overall Best Project award. 
@@ -172,8 +178,8 @@ https://github.com/yashc73080/Stock-Prediction-Model
 ### Director of Technology and AI
 May 2025 - Present
 Club
-- Lead AI/neuroscience projects and manage the club’s digital tools, platforms, and website
-- Direct tech and engineering committees to host workshops, resolve technical issues, and support innovation
+- Developing ML mentor matching algorithm using word embeddings, semantic similarity, and Google Sheets integration
+- Leading a committee on tech and neuroscience projects; hosting workshops educating 100+ members.
 
 ## RU Autonomous (AIAA)
 ### Imaging Subteam
@@ -228,11 +234,15 @@ Club
 - MongoDB
 - Postman
 - SLURM
+- Qiskit
 - Jupyter
 - MS Office (Excel, Word, etc)
 
 # Certifications/Awards
 
+- Microsoft Applied Skills: Build a natural language processing solution with Azure AI Language
+- AI-Assisted Software Engineering for Quantum Computing and Post-Quantum Cryptography (AI-SEQ)
 - Unity VR Development
 - Dean's List
+- SAS Excellence Award
 - Gold Presidential Volunteer Service Award

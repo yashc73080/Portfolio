@@ -35,6 +35,7 @@ export const DATA = {
     "Azure",
     "Google Cloud Platform",
     "Databricks",
+    "Qiskit",
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -71,7 +72,7 @@ export const DATA = {
       href: "https://ryan.com/",
       badges: [],
       location: "Dallas, TX",
-      title: "Incoming Technology Intern  ",
+      title: "Software Engineering Intern  ",
       logoUrl: "/ryan.png",
       start: "May 2025",
       end: "August 2025",
@@ -196,9 +197,63 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "SkillSync",
+      href: "https://github.com/yashc73080/hackruf25",
+      dates: "Oct 2025 - Oct 2025",
+      active: true,
+      description:
+        "Built AI platform for automated team role assignment and generating role specifications. Processes resumes and GitHub profiles using LLMs to match skills with project needs, enhancing team efficiency.",
+      technologies: [
+        "Next.js",
+        "React.js",
+        "JavaScript",
+        "Google Cloud Platform",
+        "FastAPI",
+        "Python",
+        "Gemini API",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/yashc73080/hackruf25",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/skillsync.jpeg",
+      video: "",
+    },
+    {
+      title: "RUControversial",
+      href: "https://github.com/yashc73080/RUControversial",
+      dates: "Mar 2025 - May 2025",
+      active: true,
+      description:
+        "Developed an NLP-powered tool to predict audience reactions to Reddit posts before publishing, leveraging a fine-tuned DeBERTa-v3 transformer model for social sentiment prediction.",
+      technologies: [
+        "Python",
+        "PyTorch",
+        "Scikit-Learn",
+        "HuggingFace",
+        "Transformers",
+        "PostgreSQL",
+        "Supabase",
+        "CUDA",
+        "HPC",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/yashc73080/RUControversial",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/rucontroversial.png",
+      video: "",
+    },
+    {
       title: "WeDormin?",
       href: "https://wedormin-nsh5.onrender.com/",
-      dates: "Mar 2025 - Present",
+      dates: "Mar 2025 - Apr 2025",
       active: true,
       description:
         "Created a web app to help college students find roommates and housing. Users can create profiles, search for roommates, and find available dorms. Integrated AI to match users based on preferences.",
@@ -234,37 +289,9 @@ export const DATA = {
       video: "",
     },
     {
-      title: "RUControversial",
-      href: "https://github.com/yashc73080/RUControversial",
-      dates: "Mar 2025 - May 2025",
-      active: true,
-      description:
-        "Developed an NLP-powered tool to predict audience reactions to Reddit posts before publishing, leveraging a fine-tuned DeBERTa-v3 transformer model for social sentiment prediction.",
-      technologies: [
-        "Python",
-        "PyTorch",
-        "Scikit-Learn",
-        "HuggingFace",
-        "Transformers",
-        "PostgreSQL",
-        "Supabase",
-        "CUDA",
-        "HPC",
-      ],
-      links: [
-        {
-          type: "Source",
-          href: "https://github.com/yashc73080/RUControversial",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "/rucontroversial.png",
-      video: "",
-    },
-    {
       title: "Frantry",
       href: "https://github.com/yashc73080/Frantry",
-      dates: "Feb 2025 - Present",
+      dates: "Feb 2025 - Mar 2025",
       active: true,
       description:
         "Developed iOS and Android mobile app to scan receipts with OCR, track pantry items, predict shelf life, and generate recipes with AI to reduce food waste.",
@@ -589,6 +616,22 @@ export const DATA = {
   ],
   hackathons: [
     {
+      title: "HackRU Fall 2025",
+      dates: "October 4-5, 2025",
+      location: "New Brunswick, NJ",
+      description:
+        "Developed SkillSync: A platform to automatically assign team roles and generate role specifications using LLMs.",
+      image: "/hackruf25.jpeg",
+      mlh: "",
+      links: [
+        {
+          title: "Source",
+          icon: <Icons.github className="h-4 w-4" />,
+          href: "https://github.com/yashc73080/hackruf25",
+        },
+      ],
+    },
+    {
       title: "Bank of America Code-A-Thon ~ Finalist",
       dates: "March 16-23, April 9-11, 2025",
       location: "Charlotte, NC",
@@ -664,7 +707,7 @@ export const DATA = {
       start: "May 2025",
       end: "Present",
       description: 
-        "Lead AI/neuroscience projects and manage the club's digital tools, platforms, and website. Direct tech and engineering committees to host workshops, resolve technical issues, and support innovation.",
+        "Developing ML mentor matching algorithm using word embeddings, semantic similarity, and Google Sheets integration. Leading a committee for technology and neuroscience projects. Hosting interactive workshops educating 100+ members.",
       links: [
         {
           type: "The Grey Matter Project",
