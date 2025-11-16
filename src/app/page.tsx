@@ -1,5 +1,4 @@
 "use client";
-// TODO add clubs
 import { DATA } from "@/data/resume";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";

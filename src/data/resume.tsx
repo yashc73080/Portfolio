@@ -39,7 +39,7 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "https://docs.google.com/document/d/e/2PACX-1vQOJIlwtTdI1FBLWaAu9_5qREEFukUqNKpaD3GygA0CtMb8yHzE3vp7k7XtKVazDdgqo5SUTxIK_5Yx/pub", icon: NotebookIcon, label: "Resume" }, // Can switch to pdf
+    { href: "https://yash-chennawar.tiiny.site/", icon: NotebookIcon, label: "Resume" }, // Can switch to pdf
   ],
   contact: {
     email: "yash.chennawar@gmail.com",
