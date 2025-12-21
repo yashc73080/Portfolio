@@ -243,6 +243,7 @@ export default function Page() {
           </div>
         </div>
       </section>
+
       <section id="hackathons">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 13}>
@@ -282,6 +283,7 @@ export default function Page() {
           </BlurFade>
         </div>
       </section>
+
       <section id="clubs">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 17}>
@@ -320,6 +322,53 @@ export default function Page() {
           ))}
         </div>
       </section>
+
+      <section id="publications" className="pt-12">
+        <div className="flex min-h-0 flex-col gap-y-3">
+          <BlurFade delay={BLUR_FADE_DELAY * 19}>
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                  Publications
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  Research & Publications
+                </h2>
+                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Check out my{" "}
+                  <Link
+                    href={DATA.scholarProfile}
+                    className="text-blue-500 hover:underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Google Scholar
+                  </Link>{" "}
+                  profile for more details.
+                </p>
+              </div>
+            </div>
+          </BlurFade>
+          {DATA.publications.map((publication, id) => (
+            <BlurFade
+              key={publication.title}
+              delay={BLUR_FADE_DELAY * 20 + id * 0.05}
+            >
+              <ResumeCard
+                key={publication.title}
+                logoUrl={publication.logoUrl}
+                altText={publication.authors.split(",")[0].trim()}
+                title={publication.title}
+                subtitle={publication.authors}
+                period={publication.year}
+                description={publication.description}
+                links={publication.links}
+              />
+            </BlurFade>
+          ))}
+        </div>
+      </section>
+
       <section id="contact">
         <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 16}>

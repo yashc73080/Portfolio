@@ -813,4 +813,29 @@ export const DATA = {
       ],
     },
   ],
+  publications: [
+    {
+      title: "Cellular and subcellular specialization enables biology-constrained deep learning",
+      authors: "Alessandro R. Galloni, Ajay Peddada, Yash Chennawar, Aaron D. Milstein",
+      journal: "bioRxiv",
+      year: "2025",
+      logoUrl: "/rutgers.png",
+      description:
+        "Research and development of neural networks inspired by biological brain mechanisms to advance pattern discrimination tasks as solutions for the deep learning synaptic credit assignment problem.",
+      links: [
+        {
+          type: "Paper",
+          href: "https://doi.org/10.1101/2025.05.22.655599",
+          icon: <FileText className="size-3" />,
+        },
+        {
+          type: "Lab",
+          href: "https://cabm.rutgers.edu/research/milstein-lab",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+    },
+    // Add more publications as needed
+  ],
+  scholarProfile: "https://scholar.google.com/citations?user=UafdLY8AAAAJ&hl=en",
 } as const;
