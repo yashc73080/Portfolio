@@ -21,6 +21,12 @@ Coursework: Introduction to Deep Learning, Introduction to Artificial Intelligen
 
 # Technical/Work Experience
 
+## Lockheed Martin
+### Incoming AI/ML Intern
+May 2026 - August 2026
+King of Prussia, PA
+- Lockheed Martin - Space
+
 ## Ryan, LLC
 ### Software Engineer Intern
 May 2025 - August 2025
@@ -68,6 +74,12 @@ Monroe Township, New Jersey
 - Helped the students develop engineering and physics skills to understand robotics and mechanics such as gear mechanics.
 
 # Projects
+
+## PodVibe.fm
+Dec 2025
+Project
+Developed PodVibe, an intelligent AI-driven podcast summarization platform that transforms long-form YouTube podcast videos into concise, high-impact insights. The system employs a modular, agentic architecture comprising planning, execution, and memory components to fetch transcripts, generate summaries using Google Gemini, extract semantic keywords, and facilitate timestamp navigation for key concepts. It includes a React frontend and Flask API backend, integrates the YouTube Data API, and logs agent actions for full observability. This project shows agent orchestration, natural language understanding, semantic analysis, and end-to-end full-stack development.
+https://github.com/euglopi/PodVibe
 
 ## SkillSync
 Oct 2025 - Oct 2025
@@ -188,6 +200,12 @@ Club
 - Developing autonomous aircraft to complete waypoint navigation, image capture, target recognition, air delivery, etc
 - Using Python to make computer vision ML models for image recognition with convolutional neural networks
 
+# Publications
+
+### Cellular and subcellular specialization enables biology-constrained deep learning
+https://doi.org/10.1101/2025.05.22.655599
+Learning and memory in the brain depend on changes in the strengths of synaptic connections between neurons. While the molecular and cellular mechanisms of synaptic plasticity have been extensively studied experimentally, much of our understanding of how plasticity is organized across populations of neurons during task learning comes from training artificial neural networks (ANNs) using computational methods. However, the architectures of modern ANNs and the algorithms used to train them are not compatible with fundamental principles of neuroscience, leaving a gap in understanding how the brain coordinates learning across multiple layers of neural circuitry. Here we leverage recent experimental evidence to test an emergent theory that biological learning depends on specialization of distinct neuronal cell types and compartmentalized signaling within neuronal dendrites. We demonstrate that multilayer ANNs comprised of separate recurrently connected excitatory and inhibitory cell types, and neuronal units with separate soma and dendrite compartments, can be trained to accurately classify images using a fully biology-compatible deep learning algorithm called dendritic target propagation. By adhering to strict biological constraints, this model is able to provide unique insight into the biological mechanisms of learning and to make experimentally testable predictions regarding the roles of specific neuronal cell types in coordinating learning across different brain regions.
+
 # Skills
 
 ## Languages
@@ -240,6 +258,7 @@ Club
 
 # Certifications/Awards
 
+- 5-Day AI Agents Intensive Course with Google
 - Microsoft Applied Skills: Build a natural language processing solution with Azure AI Language
 - AI-Assisted Software Engineering for Quantum Computing and Post-Quantum Cryptography (AI-SEQ)
 - Unity VR Development

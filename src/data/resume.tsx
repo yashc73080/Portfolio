@@ -68,6 +68,25 @@ export const DATA = {
 
   work: [
     {
+      company: "Lockheed Martin",
+      href: "https://www.lockheedmartin.com",
+      badges: [],
+      location: "King of Prussia, PA",
+      title: "Incoming AI/ML Intern",
+      logoUrl: "/lockheed.jpeg",
+      start: "May 2026",
+      end: "August 2026",
+      description:
+        "Lockheed Martin - Space",
+      links: [
+        {
+          type: "Lockheed Martin",
+          href: "https://www.lockheedmartin.com",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+    },
+    {
       company: "Ryan, LLC",
       href: "https://ryan.com/",
       badges: [],
@@ -185,7 +204,7 @@ export const DATA = {
       logoUrl: "/rutgers.png",
       start: "2023",
       end: "Present",
-      description: "**Societies**: Phi Beta Kappa Honor Society\n**Coursework**: Introduction to Deep Learning, Introduction to Artificial Intelligence, Introduction to Data Science, Tensor Networks as a bridge between Neural Networks and Quantum Physics, Computer Architecture, Data Structures, Principles of Information and Data Management, Design and Analysis of Computer Algorithms, Discrete Structures (I & II), Linear Algebra, Elementary Differential Equations, Calculus III, Probability Theory",
+      description: "**Societies**: Phi Beta Kappa Honor Society\n**Coursework**: Introduction to Deep Learning, Introduction to Artificial Intelligence, Introduction to Data Science, Computer Architecture, Data Structures, Principles of Information and Data Management, Design and Analysis of Computer Algorithms, Discrete Structures (I & II), Linear Algebra, Elementary Differential Equations, Calculus III, Probability Theory, Tensor Networks",
       links: [
         {
           type: "Rutgers Honors College",
@@ -196,6 +215,32 @@ export const DATA = {
     },
   ],
   projects: [
+    {
+      title: "PodVibe.fm",
+      href: "https://github.com/euglopi/PodVibe",
+      dates: "Dec 2025",
+      active: true,
+      description:
+        "Created agentic AI web application that generates key insights from videos/podcasts, letting users navigate to key concepts. Used Google Cloud's Gemini and YouTube Data APIs for autonomous analysis and content summarization.",
+      technologies: [
+        "Vite.js",
+        "React.js",
+        "TypeScript",
+        "Google Cloud Platform",
+        "Flask",
+        "Python",
+        "Gemini API",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/euglopi/PodVibe",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/podvibe.jpeg",
+      video: "",
+    },
     {
       title: "SkillSync",
       href: "https://github.com/yashc73080/hackruf25",
@@ -615,6 +660,38 @@ export const DATA = {
     },
   ],
   hackathons: [
+    {
+      title: "ODSC x Google Cloud Agentic AI Hackathon",
+      dates: "December 12, 2025",
+      location: "Manhattan, New York",
+      description:
+        "Developed PodVibe.fm: Agentic tool to generate key insights from videos/podcasts and fast forward to important segments.",
+      image: "/google_cloud.png",
+      mlh: "",
+      links: [
+        {
+          title: "Source",
+          icon: <Icons.github className="h-4 w-4" />,
+          href: "https://github.com/euglopi/PodVibe",
+        },
+      ],
+    },
+    {
+      title: "Kaggle x Google Agents Intensive Capstone Project",
+      dates: "November 14 - December 3, 2025",
+      location: "Online",
+      description:
+        "Developed CrisisNet: Agentic AI system for real-time disaster monitoring and actionable safety suggestions.",
+      image: "/kaggle.png",
+      mlh: "",
+      links: [
+        {
+          title: "Source",
+          icon: <Icons.github className="h-4 w-4" />,
+          href: "https://github.com/yashc73080/crisis-intel-agent",
+        },
+      ],
+    },
     {
       title: "HackRU Fall 2025",
       dates: "October 4-5, 2025",

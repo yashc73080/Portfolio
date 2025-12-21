@@ -37,3 +37,4 @@ next-env.d.ts
 
 *.ipynb
 __pycache__/
+.vscode/*

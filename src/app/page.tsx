@@ -8,6 +8,7 @@ import { HackathonCard } from "@/components/hackathon-card";
 import { Chatbot } from "@/components/chatbot";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
+import Image from "next/image";
 import TypingAnimation from "@/components/ui/typing-animation";
 import Markdown from "react-markdown";
 import { X } from 'lucide-react';
@@ -16,45 +17,55 @@ import React, { useState, useEffect } from "react";
 
 const BLUR_FADE_DELAY = 0.04;
 
+// const GradientSparkles = () => (
+//   <svg
+//     viewBox="0 0 24 24"
+//     width="40"
+//     height="40"
+//     className="h-10 w-10"
+//   >
+//     <defs>
+//     <linearGradient id="sparkleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+//       <stop offset="0%" stopColor="#7C3AED" />
+//       <stop offset="33%" stopColor="#7C3AED" />
+//       <stop offset="42%" stopColor="#2563EB" />
+//       <stop offset="58%" stopColor="#2563EB" />
+//       <stop offset="70%" stopColor="#10B981" />
+//       <stop offset="100%" stopColor="#10B981" />
+//     </linearGradient>
+//     </defs>
+//     {/* Main center sparkle */}
+//     <path
+//       d="M12 1L14.5 9.5L22 11L14.5 12.5L12 21L9.5 12.5L2 11L9.5 9.5L12 1Z"
+//       fill="url(#sparkleGradient)"
+//     >
+//       <animate attributeName="opacity" values="1;0.7;1" dur="2s" repeatCount="indefinite" />
+//     </path>
+//     {/* Top right sparkle */}
+//     <path
+//       d="M19 0L20.5 3.5L24 4.5L20.5 5.5L19 9L17.5 5.5L14 4.5L17.5 3.5L19 0Z"
+//       fill="url(#sparkleGradient)"
+//     >
+//       <animate attributeName="opacity" values="1;0.5;1" dur="1.5s" repeatCount="indefinite" />
+//     </path>
+//     {/* Bottom left sparkle */}
+//     <path
+//       d="M5 13L6.5 16.5L10 17.5L6.5 18.5L5 22L3.5 18.5L0 17.5L3.5 16.5L5 13Z"
+//       fill="url(#sparkleGradient)"
+//     >
+//       <animate attributeName="opacity" values="1;0.5;1" dur="1.7s" repeatCount="indefinite" />
+//     </path>
+//   </svg>
+// );
+
 const GradientSparkles = () => (
-  <svg
-    viewBox="0 0 24 24"
-    width="40"
-    height="40"
-    className="h-10 w-10"
-  >
-    <defs>
-    <linearGradient id="sparkleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stopColor="#7C3AED" />
-      <stop offset="33%" stopColor="#7C3AED" />
-      <stop offset="42%" stopColor="#2563EB" />
-      <stop offset="58%" stopColor="#2563EB" />
-      <stop offset="70%" stopColor="#10B981" />
-      <stop offset="100%" stopColor="#10B981" />
-    </linearGradient>
-    </defs>
-    {/* Main center sparkle */}
-    <path
-      d="M12 1L14.5 9.5L22 11L14.5 12.5L12 21L9.5 12.5L2 11L9.5 9.5L12 1Z"
-      fill="url(#sparkleGradient)"
-    >
-      <animate attributeName="opacity" values="1;0.7;1" dur="2s" repeatCount="indefinite" />
-    </path>
-    {/* Top right sparkle */}
-    <path
-      d="M19 0L20.5 3.5L24 4.5L20.5 5.5L19 9L17.5 5.5L14 4.5L17.5 3.5L19 0Z"
-      fill="url(#sparkleGradient)"
-    >
-      <animate attributeName="opacity" values="1;0.5;1" dur="1.5s" repeatCount="indefinite" />
-    </path>
-    {/* Bottom left sparkle */}
-    <path
-      d="M5 13L6.5 16.5L10 17.5L6.5 18.5L5 22L3.5 18.5L0 17.5L3.5 16.5L5 13Z"
-      fill="url(#sparkleGradient)"
-    >
-      <animate attributeName="opacity" values="1;0.5;1" dur="1.7s" repeatCount="indefinite" />
-    </path>
-  </svg>
+  <Image
+    src="/sparkles.webp"
+    alt="sparkles"
+    width={40}
+    height={40}
+    className="h-10 w-10 invert"
+  />
 );
 
 export default function Page() {
@@ -357,7 +368,7 @@ export default function Page() {
         )}
         <button
           onClick={() => setIsChatOpen(!isChatOpen)}
-          className="bg-foreground hover:bg-foreground/90 text-background rounded-full p-2 shadow-md hover:shadow-lg transition-all duration-200 hover:scale-105"
+          className="bg-foreground dark:bg-background hover:bg-foreground/90 dark:hover:bg-background/90 text-background dark:text-foreground rounded-full p-2 shadow-md hover:shadow-lg transition-all duration-200 hover:scale-105 border dark:border-foreground/20"
           aria-label={isChatOpen ? "Close chat" : "Open chat"}
         >
           {isChatOpen ? (
