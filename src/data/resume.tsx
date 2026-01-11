@@ -216,6 +216,40 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "Pathwise",
+      href: "https://pathwise.web.app",
+      dates: "Jan 2026 - Present",
+      active: true,
+      description:
+        "Developed a travel itinerary optimizer with agentic AI planning and searching. Includes authentication, mobile support, and Google Maps integration.",
+      technologies: [
+        "Next.js",
+        "React.js",
+        "JavaScript",
+        "Google Cloud Platform",
+        "Firebase",
+        "Python",
+        "Gemini API",
+        "Vertex AI",
+        "Flask",
+        "Docker",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://pathwise.web.app",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/yashc73080/pathwise",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/pathwise.jpeg",
+      video: "",
+    },
+    {
       title: "PodVibe.fm",
       href: "https://github.com/euglopi/PodVibe",
       dates: "Dec 2025",
@@ -239,6 +273,29 @@ export const DATA = {
         },
       ],
       image: "/podvibe.jpeg",
+      video: "",
+    },
+    {
+      title: "CrisisNet",
+      href: "https://github.com/yashc73080/crisis-intel-agent",
+      dates: "Nov 2025",
+      active: true,
+      description:
+        "Designed a multi-agent AI system for real-time disaster monitoring and actionable safety suggestions. Integrated data from news and weather APIs to provide comprehensive situational awareness during crises.",
+      technologies: [
+        "Python",
+        "Google Cloud Platform",
+        "Gemini API",
+        "Vertex AI",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/yashc73080/crisis-intel-agent",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/crisisnet.jpeg",
       video: "",
     },
     {
@@ -431,6 +488,7 @@ export const DATA = {
       href: "https://tripwhiz.onrender.com/",
       dates: "Oct 2024 - Jan 2025",
       active: true,
+      legacy: true,
       description:
         "Creating a web app that optimizes multi-destination travel routes and provides personalized travel guidance via an AI-powered chatbot.",
       technologies: [

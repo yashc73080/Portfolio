@@ -75,11 +75,24 @@ Monroe Township, New Jersey
 
 # Projects
 
+## Pathwise
+Jan 2026 - Present
+Project
+Pathwise is an AI-powered travel itinerary planner designed to bridge the gap between discovery and logistical optimization. Built as a full-stack application using Next.js and Python (Flask), it leverages Google Vertex AI (Gemini) to provide conversational travel assistance and structured location recommendations with agentic AI. A key technical feature is the implementation of the Christofides algorithm, which solves the Traveling Salesperson Problem (TSP) to mathematically optimize route efficiency for multi-stop trips. The platform delivers a seamless cross-device experience, running as both a responsive web application and a native mobile app via Capacitor, with Firebase handling secure authentication and real-time data persistence. Used Docker for deployment and CI/CD workflows.
+https://github.com/yashc73080/Pathwise
+https://pathwise.web.app
+
 ## PodVibe.fm
 Dec 2025
 Project
 Developed PodVibe, an intelligent AI-driven podcast summarization platform that transforms long-form YouTube podcast videos into concise, high-impact insights. The system employs a modular, agentic architecture comprising planning, execution, and memory components to fetch transcripts, generate summaries using Google Gemini, extract semantic keywords, and facilitate timestamp navigation for key concepts. It includes a React frontend and Flask API backend, integrates the YouTube Data API, and logs agent actions for full observability. This project shows agent orchestration, natural language understanding, semantic analysis, and end-to-end full-stack development.
 https://github.com/euglopi/PodVibe
+
+## CrisisNet
+Nov 2025
+Project
+Built an autonomous multi-agent system for real-time crisis intelligence that ingests global disaster data, assesses risk, and generates actionable safety suggestions. The platform uses Python and a decoupled event-driven architecture to continuously monitor sources such as GDACS and USGS. It classifies severity, maps threat zones, computes safe evacuation routes with Google Maps APIs, and supports natural language querying via Google Gemini. Firestore is used for persistence, and FastAPI serves as an API gateway for integration. This project has full-stack design, asynchronous processing, external API coordination, intelligent risk scoring, and geospatial analysis to support rapid situational awareness during emergencies. Developed for Google's 5 Day Agentic AI course and hackathon.
+https://github.com/yashc73080/crisis-intel-agent
 
 ## SkillSync
 Oct 2025 - Oct 2025

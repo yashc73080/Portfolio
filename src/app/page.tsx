@@ -75,7 +75,7 @@ export default function Page() {
   useEffect(() => {
     // Show the popup after a short delay
     const showTimer = setTimeout(() => setShowPopup(true), 2000);
-    
+
     // Hide the popup after 5 seconds
     const hideTimer = setTimeout(() => setShowPopup(false), 7000);
 
@@ -215,30 +215,31 @@ export default function Page() {
                   Some cool stuff I&apos;ve built
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  I&apos;ve developed many projects, AI-powered web applications to machine learning models.
-                  Here are some of my favorites. 
+                  I&apos;ve developed many projects, from AI-powered web applications to machine learning models.
+                  Here are some of my favorites.
                 </p>
               </div>
             </div>
           </BlurFade>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
             {DATA.projects.map((project, id) => (
-              <BlurFade
-                key={project.title}
-                delay={BLUR_FADE_DELAY * 12 + id * 0.05}
-              >
-                <ProjectCard
-                  href={project.href}
-                  key={project.title}
-                  title={project.title}
-                  description={project.description}
-                  dates={project.dates}
-                  tags={project.technologies}
-                  image={project.image}
-                  video={project.video}
-                  links={project.links}
-                />
-              </BlurFade>
+              <div key={project.title} id={project.title.toLowerCase().replace(/\s+/g, '-')}>
+                <BlurFade
+                  delay={BLUR_FADE_DELAY * 12 + id * 0.05}
+                >
+                  <ProjectCard
+                    href={project.href}
+                    title={project.title}
+                    description={project.description}
+                    dates={project.dates}
+                    tags={project.technologies}
+                    image={project.image}
+                    video={project.video}
+                    links={project.links}
+                    legacy={"legacy" in project ? project.legacy : undefined}
+                  />
+                </BlurFade>
+              </div>
             ))}
           </div>
         </div>
@@ -256,7 +257,7 @@ export default function Page() {
                   Building things with friends
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  I love participating in hackathons and learning about wonderful and innovative ideas from my 
+                  I love participating in hackathons and learning about wonderful and innovative ideas from my
                   teammates and other groups.
                 </p>
               </div>
@@ -397,7 +398,7 @@ export default function Page() {
                   rel="noopener noreferrer"
                 >
                   Email
-                </Link>{" "} 
+                </Link>{" "}
                 if you have any questions or just want to chat.
               </p>
             </div>
@@ -406,34 +407,34 @@ export default function Page() {
       </section>
 
       <div className="fixed bottom-[20%] right-6 flex items-center">
-      <div className="relative">
-        {showPopup && (
-          <div className="absolute bottom-full right-0 mb-2 transform-none">
-            <div className="relative bg-foreground text-background px-5 py-1 rounded-lg shadow-lg animate-fade-in-out text-sm whitespace-nowrap">
-              Try me!
-              <div className="absolute -bottom-1 right-3 w-3 h-3 transform rotate-45 bg-foreground" />
+        <div className="relative">
+          {showPopup && (
+            <div className="absolute bottom-full right-0 mb-2 transform-none">
+              <div className="relative bg-foreground text-background px-5 py-1 rounded-lg shadow-lg animate-fade-in-out text-sm whitespace-nowrap">
+                Try me!
+                <div className="absolute -bottom-1 right-3 w-3 h-3 transform rotate-45 bg-foreground" />
+              </div>
             </div>
+          )}
+          <button
+            onClick={() => setIsChatOpen(!isChatOpen)}
+            className="bg-foreground dark:bg-background hover:bg-foreground/90 dark:hover:bg-background/90 text-background dark:text-foreground rounded-full p-2 shadow-md hover:shadow-lg transition-all duration-200 hover:scale-105 border dark:border-foreground/20"
+            aria-label={isChatOpen ? "Close chat" : "Open chat"}
+          >
+            {isChatOpen ? (
+              <X className="h-5 w-5" />
+            ) : (
+              <GradientSparkles />
+            )}
+          </button>
+        </div>
+
+        {isChatOpen && (
+          <div className="fixed bottom-20 right-6 w-80 h-[30rem] bg-background border border-foreground/20 text-foreground rounded-md shadow-xl overflow-hidden flex flex-col">
+            <Chatbot onClose={() => setIsChatOpen(false)} />
           </div>
         )}
-        <button
-          onClick={() => setIsChatOpen(!isChatOpen)}
-          className="bg-foreground dark:bg-background hover:bg-foreground/90 dark:hover:bg-background/90 text-background dark:text-foreground rounded-full p-2 shadow-md hover:shadow-lg transition-all duration-200 hover:scale-105 border dark:border-foreground/20"
-          aria-label={isChatOpen ? "Close chat" : "Open chat"}
-        >
-          {isChatOpen ? (
-            <X className="h-5 w-5" />
-          ) : (
-            <GradientSparkles />
-          )}
-        </button>
       </div>
-      
-      {isChatOpen && (
-        <div className="fixed bottom-20 right-6 w-80 h-[30rem] bg-background border border-foreground/20 text-foreground rounded-md shadow-xl overflow-hidden flex flex-col">
-          <Chatbot onClose={() => setIsChatOpen(false)}/>
-        </div>
-      )}
-    </div>
 
     </main>
   );

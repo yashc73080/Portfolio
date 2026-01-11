@@ -26,6 +26,7 @@ interface Props {
     href: string;
   }[];
   className?: string;
+  legacy?: boolean;
 }
 
 export function ProjectCard({
@@ -39,6 +40,7 @@ export function ProjectCard({
   video,
   links,
   className,
+  legacy,
 }: Props) {
   return (
     <Card
@@ -49,7 +51,7 @@ export function ProjectCard({
       <Link
         href={href || "#"}
         className={cn("block cursor-pointer", className)}
-        target="_blank" 
+        target="_blank"
         rel="noopener noreferrer"
       >
         {video && (
@@ -74,7 +76,22 @@ export function ProjectCard({
       </Link>
       <CardHeader className="px-2">
         <div className="space-y-1">
-          <CardTitle className="mt-1 text-base">{title}</CardTitle>
+          <div className="flex items-center gap-2">
+            <CardTitle className="mt-1 text-base">{title}</CardTitle>
+            {legacy && (
+              <Badge
+                variant="outline"
+                className="text-[10px] px-1.5 py-0 mt-[1px] border-amber-500/50 text-amber-600 dark:text-amber-400 bg-amber-500/10 cursor-pointer hover:bg-amber-500/20 transition-colors"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  document.getElementById("pathwise")?.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                Legacy
+              </Badge>
+            )}
+          </div>
           <time className="font-sans text-xs">{dates}</time>
           <div className="hidden font-sans text-xs underline print:visible">
             {link?.replace("https://", "").replace("www.", "").replace("/", "")}
