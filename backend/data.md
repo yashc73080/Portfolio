@@ -27,6 +27,21 @@ May 2026 - August 2026
 King of Prussia, PA
 - Lockheed Martin - Space
 
+## Princeton University
+### AI Researcher
+February 2026 - Present
+Princeton, NJ
+- Designing a multi-agent reinforcement learning (MARL) framework for autonomous satellite coordination, modeling constrained spacecraft networks with non-Euclidean graph neural networks to optimize orbital task allocation and communication.
+
+## Rutgers University - CABM
+### Undergraduate Research Assistant
+May 2024 - Present
+Piscataway, NJ
+- Research and develop neural networks inspired by biological brain mechanisms to advance pattern discrimination tasks as solutions for the deep learning synaptic credit assignment problem, and co-authored a peer-reviewed paper for Cell Reports. 
+- Leverage PyTorch in Python for building and fine-tuning neural network models for spiral and MNIST datasets. 
+- Conduct validation to optimize performance with HPC multithreading on Linux compute cluster with shell scripts. 
+- Began researching through Aresty Summer Science.
+
 ## Ryan, LLC
 ### Software Engineer Intern
 May 2025 - August 2025
@@ -34,15 +49,6 @@ Dallas, TX
 - As a Platform Executive, develop an ML pipeline on Azure & Databricks to automate contract data extraction for leading corporate tax firm.
 - Reduced costs by 99% after evaluating 3 methods: GPT Vision, OCR+GPT, and Azure Document Intelligence. 
 - Collaborated with data engineers and tax experts to enhance tax.com workflows with AI, significantly optimizing document processing while maintaining performance.
-
-## Rutgers University - CABM
-### Undergraduate Research Assistant
-May 2024 - Present
-Piscataway, NJ
-- Research and develop neural networks inspired by biological brain mechanisms to advance pattern discrimination tasks as solutions for the deep learning synaptic credit assignment problem, and publishing a paper for Neuron. 
-- Leverage PyTorch in Python for building and fine-tuning neural network models for spiral and MNIST datasets. 
-- Conduct validation to optimize performance with HPC multithreading on Linux compute cluster with shell scripts. 
-- Began researching through Aresty Summer Science.
 
 ## Headstarter AI
 ### Software Engineer Fellow
@@ -74,6 +80,18 @@ Monroe Township, New Jersey
 - Helped the students develop engineering and physics skills to understand robotics and mechanics such as gear mechanics.
 
 # Projects
+
+## LemonAid
+March 2026
+Project
+LemonAid is a full-stack data intelligence platform designed to transform fragmented food access data into actionable insights for nonprofits, donors, and government agencies. The platform integrates real-time resource data, community feedback, and public datasets (e.g., census poverty data) to provide a unified view of food accessibility and uncover systemic gaps.
+Key features:
+- Developed a Graph Neural Network (GraphSAGE) pipeline to model spatial relationships between food resources and deeply understand coverage gaps across regions
+- Designed role-based dashboards and interactive map visualizations for multi-stakeholder decision-making
+- Built AI-powered feedback analysis (NLP) and vision-based image analysis to extract insights from unstructured data
+- Engineered a scalable full-stack system using Next.js, PostgreSQL (Supabase), and Python (PyTorch Geometric)
+- Implemented analytics, reliability scoring, and reporting tools to enable data-driven policy and operational decisions
+This is a hackathon project and we won 1st place at the Morgan Stanley Code to Give Hackathon in New York City. 
 
 ## Pathwise
 Jan 2026 - Present
@@ -203,6 +221,7 @@ https://github.com/yashc73080/Stock-Prediction-Model
 ### Director of Technology and AI
 May 2025 - Present
 Club
+- Led and hosted GreyHacks, our first student hackathon. Organized logistics, secured sponsorships from Microsoft and ElevenLabs, mentored participants, and coordinated judging to create a successful event. 
 - Developing ML mentor matching algorithm using word embeddings, semantic similarity, and Google Sheets integration
 - Leading a committee on tech and neuroscience projects; hosting workshops educating 100+ members.
 

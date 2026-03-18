@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, NotebookIcon, FileText } from "lucide-react";
+import { HomeIcon, NotebookIcon, FileText, CodeIcon } from "lucide-react";
 
 export const DATA = {
   name: "Yash Chennawar",
@@ -87,25 +87,20 @@ export const DATA = {
       ],
     },
     {
-      company: "Ryan, LLC",
-      href: "https://ryan.com/",
+      company: "Princeton University",
+      href: "https://cablab.scholar.princeton.edu/",
       badges: [],
-      location: "Dallas, TX",
-      title: "Software Engineering Intern  ",
-      logoUrl: "/ryan.png",
-      start: "May 2025",
-      end: "August 2025",
+      location: "Princeton, NJ",
+      title: "AI Researcher",
+      logoUrl: "/princeton.png",
+      start: "February 2026",
+      end: "Present",
       description:
-        "As a Platform Executive, develop an ML pipeline on Azure & Databricks to automate contract data extraction for the leading corporate tax firm. Reduced costs by 99% after evaluating 3 methods: GPT Vision, OCR+GPT, and Azure Document Intelligence. Collaborated with data engineers and tax experts to enhance tax.com workflows with AI, significantly optimizing document processing while maintaining performance.",
+        "Designing a multi-agent reinforcement learning (MARL) framework for autonomous satellite coordination, modeling constrained spacecraft networks with non-Euclidean graph neural networks to optimize orbital task allocation and communication.",
       links: [
         {
-          type: "Ryan",
-          href: "https://ryan.com/",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "tax.com",
-          href: "https://tax.com/",
+          type: "Lab",
+          href: "https://cablab.scholar.princeton.edu",
           icon: <Icons.globe className="size-3" />,
         },
       ],
@@ -120,7 +115,7 @@ export const DATA = {
       start: "May 2024",
       end: "Present",
       description:
-        "Research and develop neural networks inspired by biological brain mechanisms to advance pattern discrimination tasks as solutions for the deep learning synaptic credit assignment problem, and publishing a paper for Neuron. Leverage PyTorch in Python for building and fine-tuning neural network models for spiral and MNIST datasets. Conduct validation to optimize performance with HPC multithreading on Linux compute cluster with shell scripts. Began researching through Aresty Summer Science. Working with Dr. Aaron Milstein and PhD students.",
+        "Research and develop neural networks inspired by biological brain mechanisms to advance pattern discrimination tasks as solutions for the deep learning synaptic credit assignment problem, and co-authored a peer-reviewed paper for Cell Reports. Leverage PyTorch in Python for building and fine-tuning neural network models for spiral and MNIST datasets. Conduct validation to optimize performance with HPC multithreading on Linux compute cluster with shell scripts. Began researching through Aresty Summer Science. Working with Dr. Aaron Milstein and PhD students.",
       links: [
         {
           type: "Lab",
@@ -141,6 +136,30 @@ export const DATA = {
           type: "Poster",
           href: "/summer_2024_poster.pdf",
           icon: <FileText className="size-3" />,
+        },
+      ],
+    },
+    {
+      company: "Ryan, LLC",
+      href: "https://ryan.com/",
+      badges: [],
+      location: "Dallas, TX",
+      title: "Software Engineering Intern  ",
+      logoUrl: "/ryan.png",
+      start: "May 2025",
+      end: "August 2025",
+      description:
+        "As a Platform Executive, develop an ML pipeline on Azure & Databricks to automate contract data extraction for the leading corporate tax firm. Reduced costs by 99% after evaluating 3 methods: GPT Vision, OCR+GPT, and Azure Document Intelligence. Collaborated with data engineers and tax experts to enhance tax.com workflows with AI, significantly optimizing document processing while maintaining performance.",
+      links: [
+        {
+          type: "Ryan",
+          href: "https://ryan.com/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "tax.com",
+          href: "https://tax.com/",
+          icon: <Icons.globe className="size-3" />,
         },
       ],
     },
@@ -215,6 +234,41 @@ export const DATA = {
     },
   ],
   projects: [
+    {
+      title: "LemonAid",
+      href: "https://lemonaid-nine.vercel.app/",
+      dates: "Mar 2026",
+      active: true,
+      description:
+        "intelligence platform for Lemontree that optimizes US food pantries using a GraphSAGE GNN to detect spatial coverage gaps and a multi-LLM pipeline for community insights.",
+      technologies: [
+        "Next.js",
+        "React.js",
+        "TypeScript",
+        "Google Cloud Platform",
+        "Supabase",
+        "Python",
+        "PyTorch Geometric",
+        "scikit-learn",
+        "Gemini API",
+        "Groq API",
+        "Vercel",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://lemonaid-nine.vercel.app",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/Code2Give/code2give",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/lemonaid.jpeg",
+      video: "",
+    },
     {
       title: "Pathwise",
       href: "https://pathwise.web.app",
@@ -718,6 +772,38 @@ export const DATA = {
     },
   ],
   hackathons: [
+    {
+      title: "Morgan Stanley Code to Give ~ 1st Place",
+      dates: "March 13-16, 2026",
+      location: "Manhattan, New York",
+      description:
+        "Developed LemonAid: Intelligence platform for nonprofit Lemontree to optimize food pantries with AI and deep learning powered insights.",
+      image: "/morgan_stanley.png",
+      mlh: "",
+      links: [
+        {
+          title: "Source",
+          icon: <Icons.github className="h-4 w-4" />,
+          href: "https://github.com/Code2Give/code2give",
+        },
+      ],
+    },
+    {
+      title: "GreyHacks (Rutgers Grey Matter Society)",
+      dates: "March 7, 2025",
+      location: "New Brunswick, NJ",
+      description:
+        "Led and hosted GreyHacks, our first club hackathon. Coordinated logistics, secured Microsoft and Elevenlabs sponsorships, and mentored participants. Addtionally, judged projects and awarded prizes.",
+      image: "/gms.png",
+      mlh: "",
+      links: [
+        {
+          title: "Devpost",
+          icon: <CodeIcon className="h-4 w-4" />,
+          href: "https://gms-neuronight.devpost.com/",
+        },
+      ],
+    },
     {
       title: "ODSC x Google Cloud Agentic AI Hackathon",
       dates: "December 12, 2025",
