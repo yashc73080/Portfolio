@@ -68,16 +68,16 @@ export const DATA = {
 
   work: [
     {
-      company: "Lockheed Martin",
+      company: "Lockheed Martin - Space",
       href: "https://www.lockheedmartin.com",
       badges: [],
       location: "King of Prussia, PA",
-      title: "Incoming AI/ML Intern",
+      title: "AI/ML Engineer Intern",
       logoUrl: "/lockheed.jpeg",
       start: "May 2026",
       end: "August 2026",
       description:
-        "Lockheed Martin - Space",
+        "National Security Space (NSS) team",
       links: [
         {
           type: "Lockheed Martin",
@@ -223,7 +223,7 @@ export const DATA = {
       logoUrl: "/rutgers.png",
       start: "2023",
       end: "Present",
-      description: "**Societies**: Phi Beta Kappa Honor Society\n**Coursework**: Introduction to Deep Learning, Introduction to Artificial Intelligence, Introduction to Data Science, Computer Architecture, Data Structures, Principles of Information and Data Management, Design and Analysis of Computer Algorithms, Discrete Structures (I & II), Linear Algebra, Elementary Differential Equations, Calculus III, Probability Theory, Tensor Networks",
+      description: "**Societies**: Phi Beta Kappa Honor Society\n**Awards**: Henry Rutgers Scholar, Novielli CS Award, Paul Robeson Scholar, SAS Excellence Award (x2)\n**Coursework**: Introduction to Deep Learning, Introduction to Artificial Intelligence, Introduction to Data Science, Computer Architecture, Data Structures, Principles of Information and Data Management, Design and Analysis of Computer Algorithms, Discrete Structures (I & II), Linear Algebra, Elementary Differential Equations, Calculus III, Probability Theory, Tensor Networks",
       links: [
         {
           type: "Rutgers Honors College",
@@ -235,12 +235,28 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "Glance",
+      href: "",
+      dates: "Jun 2026",
+      active: true,
+      description:
+        "Ultra-lightweight Chrome extension that highlights company names in web text and surfaces real-time stock data via clean tooltips on hover. Users can navigate to preferred brokerage or financial platform on click.",
+      technologies: [
+        "JavaScript",
+        "Manifest V3",
+      ],
+      links: [
+      ],
+      image: "/glance.png",
+      video: "",
+    },
+    {
       title: "LemonAid",
       href: "https://lemonaid-nine.vercel.app/",
       dates: "Mar 2026",
       active: true,
       description:
-        "intelligence platform for Lemontree that optimizes US food pantries using a GraphSAGE GNN to detect spatial coverage gaps and a multi-LLM pipeline for community insights.",
+        "Food intelligence platform for Lemontree that optimizes US food pantries using a GraphSAGE GNN to detect spatial coverage gaps and a multi-LLM pipeline for community insights.",
       technologies: [
         "Next.js",
         "React.js",

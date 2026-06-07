@@ -21,11 +21,11 @@ Coursework: Introduction to Deep Learning, Introduction to Artificial Intelligen
 
 # Technical/Work Experience
 
-## Lockheed Martin
-### Incoming AI/ML Intern
+## Lockheed Martin - Space
+### AI/ML Engineer Intern
 May 2026 - August 2026
 King of Prussia, PA
-- Lockheed Martin - Space
+- National Security Space (NSS) team
 
 ## Princeton University
 ### AI Researcher
@@ -79,7 +79,31 @@ Monroe Township, New Jersey
 - Taught robotics principles, Python, and LEGO Spike Coding, focusing on automation and sensor control.
 - Helped the students develop engineering and physics skills to understand robotics and mechanics such as gear mechanics.
 
+## Rutgers University
+### High School Research Assistant
+Aug 2022 - Sep 2022 
+- Worked with Ph.D. and Graduate Students in the Material Science and Engineering Department to contribute to the NSF funded research project titled "Collaborative Research: Decoding the Corrosion of Borate Glasses: From Fundamental Science to Quantitative Structure-Property Relationships". 
+- Experimented with soda-lime silicate glass to test its dissolution in beverages of different pH. Final goal was to replace plastic beverage bottles with glass, a more sustainable resource. Created a 15+ page report to demonstrate findings.
+
+## Rutgers University
+### Researcher
+Jul 2022
+- As part of the QuarkNet Research Program, I learned fundamental particle physics and Standard Model. 
+- Used IBM Qiskit to code quantum computers and explore various algorithms. 
+- Created and coded cosmic ray counters using scintillators to detect electrons, γ-rays, and muons. 
+- Developed algorithms to analyze neutrino movement and decay from particle collisions using Python.
+
+## LearnTwoGro
+### Co-Founder
+Jul 2022 - Sep 2022
+- Created a virtual tutoring business to teach Java, Python, and Microsoft MakeCode to students. Donated profits to Children International.
+
 # Projects
+
+## Glance
+June 2026
+Project
+Glance is a performance-first Manifest V3 Chrome extension that parses webpage text to surface real-time stock insights on hover. Deferring natural language processing (NLP) until elements approach the viewport via an IntersectionObserver, it maintains an ultra-lightweight thread footprint. Entity recognition leverages a three-layer pipeline combining a local dictionary (all publicly-traded US companies) with compromise.js and contextual scoring to eliminate false positives. Real-time quotes are fetched via a secure Finnhub API backend proxy with a 30-second in-memory cache, while dynamic URL routing bypasses authentication friction to directly launch 10+ retail brokerage dashboards on click.
 
 ## LemonAid
 March 2026
@@ -92,6 +116,8 @@ Key features:
 - Engineered a scalable full-stack system using Next.js, PostgreSQL (Supabase), and Python (PyTorch Geometric)
 - Implemented analytics, reliability scoring, and reporting tools to enable data-driven policy and operational decisions
 This is a hackathon project and we won 1st place at the Morgan Stanley Code to Give Hackathon in New York City. 
+https://lemonaid-nine.vercel.app/
+https://github.com/Code2Give/code2give
 
 ## Pathwise
 Jan 2026 - Present
@@ -215,6 +241,15 @@ Project
 Developed a machine learning model project to predict the next day's value for the S&P 500 index. Analyzed and manipulated stock market time series data. Created with Python using yfinance, scikit-learn, and pandas. Trained data since 1990 with a Random Forest Classifier by using the Open, Close, High, Low, and Volume values for each day.
 https://github.com/yashc73080/Stock-Prediction-Model
 
+## Filter Earth
+Jun 2022 - Sep 2022
+Developed theoretical solution to airborne carbon dioxide pollution in which small devices will capture carbon dioxide from the atmosphere and will then be inputted into drop-off centers. Trucks will transport carbon dioxide to large facility where energy will be generated from it and then it will be stored underground to create a carbon-negative system. Used CAD to create models for elements of the project and layout of the facilities.
+https://filterearth.wixsite.com/home
+
+## New Jersey Plastic Bag Ban
+Jan 2020 - Nov 2020
+Worked with a team to draft a proposal to ban single-use plastic bags in New Jersey and sent it to NJ governor. It was supported by the organization MICA (Monroe Indians for Civic Action).
+
 # Extracurricular Activities
 
 ## Rutgers Grey Matter Society
@@ -288,12 +323,20 @@ Learning and memory in the brain depend on changes in the strengths of synaptic 
 - Jupyter
 - MS Office (Excel, Word, etc)
 
-# Certifications/Awards
+# Awards
+- Henry Rutgers Scholar
+- Novielli CS Award
+- Paul Robeson Scholar
+- 1st Place at Morgan Stanley Code to Give Hackathon
+- Overall Best Project at Wakefern Hackathon
+- Finalist for Bank of America Code-A-Thon
+- SAS Excellence Award (x2)
+- Dean's List
+- Gold Presidential Volunteer Service Award
+
+# Certifications
 
 - 5-Day AI Agents Intensive Course with Google
 - Microsoft Applied Skills: Build a natural language processing solution with Azure AI Language
 - AI-Assisted Software Engineering for Quantum Computing and Post-Quantum Cryptography (AI-SEQ)
 - Unity VR Development
-- Dean's List
-- SAS Excellence Award
-- Gold Presidential Volunteer Service Award
